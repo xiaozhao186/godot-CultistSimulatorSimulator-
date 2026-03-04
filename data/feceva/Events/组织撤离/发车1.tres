@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=24 format=3 uid="uid://cvqskjto7ad1m"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_1m1d7"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_t8ba8"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_0og24"]
+[ext_resource type="Resource" uid="uid://cjlxd8m25xg47" path="res://data/feceva/Events/组织撤离/已发车.tres" id="4_t8ba8"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="4_ygclv"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="5_dbi80"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="6_1xw0n"]
+
+[sub_resource type="Resource" id="Resource_dbi80"]
+script = ExtResource("2_t8ba8")
+tag = "物资"
+
+[sub_resource type="Resource" id="Resource_1xw0n"]
+script = ExtResource("2_t8ba8")
+tag = "火车站"
+
+[sub_resource type="Resource" id="Resource_epv7a"]
+script = ExtResource("2_t8ba8")
+tag = "工程师"
+
+[sub_resource type="Resource" id="Resource_f2wfe"]
+script = ExtResource("2_t8ba8")
+tag = "工厂工人"
+
+[sub_resource type="Resource" id="Resource_tdxjv"]
+script = ExtResource("3_0og24")
+target_event = ExtResource("4_t8ba8")
+
+[sub_resource type="Resource" id="Resource_ygclv"]
+script = ExtResource("1_1m1d7")
+outcomes = Array[ExtResource("3_0og24")]([SubResource("Resource_tdxjv")])
+conditions = Array[ExtResource("2_t8ba8")]([SubResource("Resource_dbi80"), SubResource("Resource_1xw0n"), SubResource("Resource_epv7a"), SubResource("Resource_f2wfe")])
+
+[sub_resource type="Resource" id="Resource_3d7qx"]
+script = ExtResource("2_t8ba8")
+tag = "物资"
+
+[sub_resource type="Resource" id="Resource_c261l"]
+script = ExtResource("2_t8ba8")
+tag = "火车站"
+
+[sub_resource type="Resource" id="Resource_rmlkr"]
+script = ExtResource("2_t8ba8")
+tag = "工程师"
+
+[sub_resource type="Resource" id="Resource_47m5t"]
+script = ExtResource("2_t8ba8")
+tag = "工厂民兵"
+
+[sub_resource type="Resource" id="Resource_aar01"]
+script = ExtResource("3_0og24")
+target_event = ExtResource("4_t8ba8")
+
+[sub_resource type="Resource" id="Resource_00neb"]
+script = ExtResource("1_1m1d7")
+outcomes = Array[ExtResource("3_0og24")]([SubResource("Resource_aar01")])
+conditions = Array[ExtResource("2_t8ba8")]([SubResource("Resource_3d7qx"), SubResource("Resource_c261l"), SubResource("Resource_rmlkr"), SubResource("Resource_47m5t")])
+
+[sub_resource type="Resource" id="Resource_hj3gu"]
+script = ExtResource("6_1xw0n")
+required_tags = Array[String](["火车站"])
+
+[sub_resource type="Resource" id="Resource_1m1d7"]
+script = ExtResource("6_1xw0n")
+required_tags = Array[String](["物资"])
+action_type = "consume"
+
+[sub_resource type="Resource" id="Resource_t8ba8"]
+script = ExtResource("6_1xw0n")
+
+[sub_resource type="Resource" id="Resource_0og24"]
+script = ExtResource("6_1xw0n")
+
+[resource]
+script = ExtResource("5_dbi80")
+id = "发车1"
+title = "发车"
+description = "将工厂设备发车，需要工程师和工人或民兵完成发车前的准备工作"
+slots = Array[ExtResource("6_1xw0n")]([SubResource("Resource_hj3gu"), SubResource("Resource_1m1d7"), SubResource("Resource_t8ba8"), SubResource("Resource_0og24")])
+duration = 1.0
+branches = Array[ExtResource("1_1m1d7")]([SubResource("Resource_ygclv"), SubResource("Resource_00neb")])

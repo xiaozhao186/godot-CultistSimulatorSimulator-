@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://cexkdvc6j56c5"]
+
+[ext_resource type="Texture2D" uid="uid://br4aka0vy3qfc" path="res://pic/fecevap/p5.jpg" id="1_utm5d"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="2_2akky"]
+
+[resource]
+script = ExtResource("2_2akky")
+id = "am042"
+name = "前线迫击炮班组-东部"
+description = "配备迫击炮，正在东部前线组织防御"
+icon = ExtResource("1_utm5d")
+tags = Array[String](["军事单位", "前线", "东部"])
+attributes = {
+&"支援": 2,
+&"火力": 1
+}
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="VerbData" load_steps=4 format=3 uid="uid://besr6qi4mxi3m"]
+
+[ext_resource type="Script" uid="uid://i1lcnlm6wld" path="res://scripts/VerbData.gd" id="1_g3o02"]
+[ext_resource type="Resource" uid="uid://bs7f6tr1rq667" path="res://data/test/Events/beforetest/eva00.tres" id="1_mbne8"]
+[ext_resource type="Texture2D" uid="uid://dj1px7bo608sv" path="res://icon.svg" id="2_1o6cm"]
+
+[resource]
+script = ExtResource("1_g3o02")
+id = "verb2"
+title = "测试"
+description = "测试测试测试测试"
+icon = ExtResource("2_1o6cm")
+default_event = ExtResource("1_mbne8")
+metadata/_custom_type_script = "uid://i1lcnlm6wld"

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=7 format=3 uid="uid://q36eyf764uc6"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_bxhfl"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_exhpd"]
+[ext_resource type="Script" uid="uid://c5kq15ymk63y6" path="res://scripts/CardTransformation.gd" id="3_exhpd"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_vgr0a"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_rpasr"]
+
+[sub_resource type="Resource" id="Resource_vgr0a"]
+script = ExtResource("2_exhpd")
+card_ids = Array[String](["wk07"])
+
+[resource]
+script = ExtResource("3_vgr0a")
+id = "已装车"
+title = "拆卸设备"
+description = "工厂设备正在打包"
+duration = 30.0
+auto_start = true
+rewards = Array[ExtResource("2_exhpd")]([SubResource("Resource_vgr0a")])

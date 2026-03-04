@@ -1,0 +1,62 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=18 format=3 uid="uid://e0okkxi7spdx"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_k3csx"]
+[ext_resource type="Texture2D" uid="uid://dj1px7bo608sv" path="res://icon.svg" id="2_n0cfr"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_obulf"]
+[ext_resource type="Resource" uid="uid://bjb1oih4g511j" path="res://data/test/Events/beforetest/evc04.tres" id="3_f3qsa"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="3_obulf"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_uq0i2"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="4_f3qsa"]
+[ext_resource type="Resource" uid="uid://d1ffhh0nr7iby" path="res://data/test/Events/beforetest/evc05.tres" id="4_uq0i2"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="5_uq0i2"]
+[ext_resource type="Script" uid="uid://c5kq15ymk63y6" path="res://scripts/CardTransformation.gd" id="8_qa8b1"]
+
+[sub_resource type="Resource" id="Resource_f3qsa"]
+script = ExtResource("2_obulf")
+tag = "地点"
+metadata/_custom_type_script = "uid://dddlkxe4be6uv"
+
+[sub_resource type="Resource" id="Resource_k2xe5"]
+script = ExtResource("3_uq0i2")
+target_event = ExtResource("3_f3qsa")
+metadata/_custom_type_script = "uid://dhlurc1qow4gw"
+
+[sub_resource type="Resource" id="Resource_uq0i2"]
+script = ExtResource("1_k3csx")
+outcomes = Array[ExtResource("3_uq0i2")]([SubResource("Resource_k2xe5")])
+conditions = Array[ExtResource("2_obulf")]([SubResource("Resource_f3qsa")])
+metadata/_custom_type_script = "uid://bj02frdeiskfx"
+
+[sub_resource type="Resource" id="Resource_nijmc"]
+script = ExtResource("3_uq0i2")
+target_event = ExtResource("4_uq0i2")
+metadata/_custom_type_script = "uid://dhlurc1qow4gw"
+
+[sub_resource type="Resource" id="Resource_q68yt"]
+script = ExtResource("1_k3csx")
+outcomes = Array[ExtResource("3_uq0i2")]([SubResource("Resource_nijmc")])
+metadata/_custom_type_script = "uid://bj02frdeiskfx"
+
+[sub_resource type="Resource" id="Resource_rj4i3"]
+script = ExtResource("3_obulf")
+metadata/_custom_type_script = "uid://cljq581cxshph"
+
+[sub_resource type="Resource" id="Resource_c0371"]
+script = ExtResource("5_uq0i2")
+force_inhale = true
+specific_card_ids = Array[String](["cr09"])
+action_type = "consume"
+metadata/_custom_type_script = "uid://bib4cm0qyyk0k"
+
+[resource]
+script = ExtResource("4_f3qsa")
+id = "evc03"
+title = "自动吸附测试"
+description = "自动吸附测试111"
+image = ExtResource("2_n0cfr")
+slots = Array[ExtResource("5_uq0i2")]([SubResource("Resource_c0371")])
+auto_start = true
+auto_collect = true
+branches = Array[ExtResource("1_k3csx")]([SubResource("Resource_uq0i2"), SubResource("Resource_q68yt")])
+rewards = Array[ExtResource("3_obulf")]([SubResource("Resource_rj4i3")])
+metadata/_custom_type_script = "uid://d22geur8maor1"

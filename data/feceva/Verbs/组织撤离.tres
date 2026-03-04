@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="VerbData" load_steps=4 format=3 uid="uid://cbwnf3gwfdlxy"]
+
+[ext_resource type="Resource" uid="uid://cb5hgh08ltjrq" path="res://data/feceva/Events/组织撤离/撤离初始.tres" id="1_xn3r2"]
+[ext_resource type="Texture2D" uid="uid://bihlxvk1cfugm" path="res://pic/fecevap/pv3.jpg" id="2_xn3r2"]
+[ext_resource type="Script" uid="uid://i1lcnlm6wld" path="res://scripts/VerbData.gd" id="3_emmpl"]
+
+[resource]
+script = ExtResource("3_emmpl")
+title = "组织撤离"
+description = "组织工厂的撤离工作"
+icon = ExtResource("2_xn3r2")
+default_event = ExtResource("1_xn3r2")
+metadata/_custom_type_script = "uid://i1lcnlm6wld"

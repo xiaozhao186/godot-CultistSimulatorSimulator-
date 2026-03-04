@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=8 format=3 uid="uid://bjb1oih4g511j"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_kpvq6"]
+[ext_resource type="Texture2D" uid="uid://dj1px7bo608sv" path="res://icon.svg" id="3_k6n0j"]
+[ext_resource type="Script" uid="uid://c5kq15ymk63y6" path="res://scripts/CardTransformation.gd" id="4_ckc3l"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="4_j1f42"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="5_ctufc"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="6_uu4go"]
+
+[sub_resource type="Resource" id="Resource_rj4i3"]
+script = ExtResource("4_j1f42")
+card_ids = Array[String](["cr01"])
+delete_source_verb = true
+metadata/_custom_type_script = "uid://cljq581cxshph"
+
+[resource]
+script = ExtResource("5_ctufc")
+id = "evc04"
+title = "自动吸附测试2"
+description = "自动吸附测试222"
+image = ExtResource("3_k6n0j")
+duration = 1.0
+rewards = Array[ExtResource("4_j1f42")]([SubResource("Resource_rj4i3")])
+metadata/_custom_type_script = "uid://d22geur8maor1"

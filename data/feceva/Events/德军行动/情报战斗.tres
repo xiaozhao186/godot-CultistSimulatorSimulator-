@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=10 format=3 uid="uid://chtkgi8dyskri"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_w5awd"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_mwj35"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_ve7pj"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_mwj35"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_oiq3b"]
+[ext_resource type="Resource" uid="uid://djm44gu1mx80s" path="res://data/feceva/Events/德军行动/战斗胜利.tres" id="4_hawrm"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_oiq3b"]
+
+[sub_resource type="Resource" id="Resource_mwj35"]
+script = ExtResource("3_oiq3b")
+target_event = ExtResource("4_hawrm")
+
+[sub_resource type="Resource" id="Resource_hawrm"]
+script = ExtResource("1_w5awd")
+outcomes = Array[ExtResource("3_oiq3b")]([SubResource("Resource_mwj35")])
+
+[resource]
+script = ExtResource("3_mwj35")
+id = "情报战斗"
+title = "有准备的战斗"
+description = "前线部队根据情报对德军的进攻做了充分准备"
+auto_start = true
+branches = Array[ExtResource("1_w5awd")]([SubResource("Resource_hawrm")])

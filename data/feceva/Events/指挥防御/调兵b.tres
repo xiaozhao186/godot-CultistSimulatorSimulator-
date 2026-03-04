@@ -1,0 +1,128 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=25 format=3 uid="uid://oo3vvfx2eq4v"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_pp3s7"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_lmrg0"]
+[ext_resource type="Script" uid="uid://c5kq15ymk63y6" path="res://scripts/CardTransformation.gd" id="3_wtker"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="4_uyb5k"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="5_lv7ri"]
+
+[sub_resource type="Resource" id="Resource_njih2"]
+script = ExtResource("3_wtker")
+required_card_id = "am011"
+resulting_card_id = "am01"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_pp3s7"]
+script = ExtResource("3_wtker")
+required_card_id = "am012"
+resulting_card_id = "am01"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_lmrg0"]
+script = ExtResource("3_wtker")
+required_card_id = "am013"
+resulting_card_id = "am01"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_wtker"]
+script = ExtResource("3_wtker")
+required_card_id = "am021"
+resulting_card_id = "am02"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_uyb5k"]
+script = ExtResource("3_wtker")
+required_card_id = "am022"
+resulting_card_id = "am02"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_lv7ri"]
+script = ExtResource("3_wtker")
+required_card_id = "am023"
+resulting_card_id = "am02"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_ane33"]
+script = ExtResource("3_wtker")
+required_card_id = "am031"
+resulting_card_id = "am03"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_p34df"]
+script = ExtResource("3_wtker")
+required_card_id = "am032"
+resulting_card_id = "am03"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_njspa"]
+script = ExtResource("3_wtker")
+required_card_id = "am033"
+resulting_card_id = "am03"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_dysyk"]
+script = ExtResource("3_wtker")
+required_card_id = "am041"
+resulting_card_id = "am04"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_srjbr"]
+script = ExtResource("3_wtker")
+required_card_id = "am042"
+resulting_card_id = "am04"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_j5qyu"]
+script = ExtResource("3_wtker")
+required_card_id = "am043"
+resulting_card_id = "am04"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_0y46u"]
+script = ExtResource("3_wtker")
+required_card_id = "wk021"
+resulting_card_id = "wk02"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_w8s8o"]
+script = ExtResource("3_wtker")
+required_card_id = "wk022"
+resulting_card_id = "wk02"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_jd3wg"]
+script = ExtResource("3_wtker")
+required_card_id = "wk023"
+resulting_card_id = "wk02"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_htqi1"]
+script = ExtResource("3_wtker")
+required_card_id = "am051"
+resulting_card_id = "am05"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_ero1t"]
+script = ExtResource("3_wtker")
+required_card_id = "am052"
+resulting_card_id = "am05"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_lkhko"]
+script = ExtResource("3_wtker")
+required_card_id = "am053"
+resulting_card_id = "am05"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_nifer"]
+script = ExtResource("2_lmrg0")
+transformations = Array[ExtResource("3_wtker")]([SubResource("Resource_njih2"), SubResource("Resource_pp3s7"), SubResource("Resource_lmrg0"), SubResource("Resource_wtker"), SubResource("Resource_uyb5k"), SubResource("Resource_lv7ri"), SubResource("Resource_ane33"), SubResource("Resource_p34df"), SubResource("Resource_njspa"), SubResource("Resource_dysyk"), SubResource("Resource_srjbr"), SubResource("Resource_j5qyu"), SubResource("Resource_0y46u"), SubResource("Resource_w8s8o"), SubResource("Resource_jd3wg"), SubResource("Resource_htqi1"), SubResource("Resource_ero1t"), SubResource("Resource_lkhko")])
+
+[resource]
+script = ExtResource("4_uyb5k")
+id = "调兵b"
+title = "部队调动"
+description = "将此单位调离前线"
+duration = 1.0
+auto_start = true
+rewards = Array[ExtResource("2_lmrg0")]([SubResource("Resource_nifer")])

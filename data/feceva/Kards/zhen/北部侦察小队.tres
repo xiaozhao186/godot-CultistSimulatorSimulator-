@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://dgxrqfb1s85dw"]
+
+[ext_resource type="Texture2D" uid="uid://bueepnmjt8jnn" path="res://pic/fecevap/p12.jpg" id="1_hqq0r"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="2_oy2l1"]
+
+[resource]
+script = ExtResource("2_oy2l1")
+id = "am051"
+name = "前线侦察小队-北部"
+description = "不可进行侦察任务，正在北部前线组织防御"
+icon = ExtResource("1_hqq0r")
+tags = Array[String](["军事单位", "前线", "北部", "侦察"])
+attributes = Dictionary[StringName, int]({
+&"火力": 2
+})
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

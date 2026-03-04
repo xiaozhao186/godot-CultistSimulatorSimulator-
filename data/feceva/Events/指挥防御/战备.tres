@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=12 format=3 uid="uid://4xp34tq2h61w"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_1hbny"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_mggik"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_xmgak"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_ab8wo"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_xmgak"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_ab8wo"]
+[ext_resource type="Resource" uid="uid://dj235m3d2wous" path="res://data/feceva/Events/指挥防御/战备1.tres" id="4_v0lde"]
+
+[sub_resource type="Resource" id="Resource_xmgak"]
+script = ExtResource("2_xmgak")
+tag = "工厂工人"
+
+[sub_resource type="Resource" id="Resource_ab8wo"]
+script = ExtResource("3_ab8wo")
+target_event = ExtResource("4_v0lde")
+
+[sub_resource type="Resource" id="Resource_v0lde"]
+script = ExtResource("1_1hbny")
+outcomes = Array[ExtResource("3_ab8wo")]([SubResource("Resource_ab8wo")])
+conditions = Array[ExtResource("2_xmgak")]([SubResource("Resource_xmgak")])
+
+[sub_resource type="Resource" id="Resource_1hbny"]
+script = ExtResource("4_ab8wo")
+action_type = "consume"
+
+[resource]
+script = ExtResource("3_xmgak")
+id = "战备"
+title = "武装工人"
+description = "给工人发枪，但这样他们搬运物资的效率会变低"
+slots = Array[ExtResource("4_ab8wo")]([SubResource("Resource_1hbny")])
+branches = Array[ExtResource("1_1hbny")]([SubResource("Resource_v0lde")])

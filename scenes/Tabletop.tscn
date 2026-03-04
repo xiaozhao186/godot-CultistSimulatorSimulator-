@@ -1,0 +1,37 @@
+[gd_scene load_steps=9 format=3 uid="uid://cgptxym2pkt1b"]
+
+[ext_resource type="Script" uid="uid://c71vfrpcdv75w" path="res://scripts/CameraController.gd" id="1_cam"]
+[ext_resource type="PackedScene" uid="uid://c57nle3u8w2d5" path="res://scenes/DebugConsole.tscn" id="2_debug"]
+[ext_resource type="PackedScene" uid="uid://bxkyiwbpr8vom" path="res://scenes/DetailsPanel.tscn" id="3_details"]
+[ext_resource type="Texture2D" uid="uid://b53ws4gqhefow" path="res://pic/base/background.jpg" id="5_bg"]
+[ext_resource type="Script" uid="uid://ds1xud4qmuplb" path="res://scripts/TableBounds.gd" id="6_bounds"]
+[ext_resource type="Script" uid="uid://evt8bknpxqn2" path="res://scripts/SelectionMarquee.gd" id="7_marquee"]
+[ext_resource type="PackedScene" uid="uid://c7rxdv4f6u4nq" path="res://scenes/BottomBar.tscn" id="8_bottombar"]
+[ext_resource type="PackedScene" uid="uid://c0c10g0r8m7fr" path="res://scenes/SettingsPanel.tscn" id="9_settings"]
+
+[node name="Tabletop" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -100
+texture = ExtResource("5_bg")
+
+[node name="TableBounds" type="Node" parent="."]
+script = ExtResource("6_bounds")
+
+[node name="MainCamera" type="Camera2D" parent="."]
+script = ExtResource("1_cam")
+
+[node name="SelectionMarquee" type="Node2D" parent="."]
+z_index = 1000
+script = ExtResource("7_marquee")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DebugConsole" parent="CanvasLayer" instance=ExtResource("2_debug")]
+
+[node name="DetailsPanel" parent="CanvasLayer" instance=ExtResource("3_details")]
+
+[node name="BottomBar" parent="CanvasLayer" instance=ExtResource("8_bottombar")]
+
+[node name="SettingsPanel" parent="CanvasLayer" instance=ExtResource("9_settings")]
+z_index = 100

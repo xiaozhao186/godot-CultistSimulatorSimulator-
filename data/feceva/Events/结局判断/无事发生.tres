@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=7 format=3 uid="uid://65x7au6s8k4m"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_nblut"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_m66ed"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_d3lpe"]
+[ext_resource type="Script" uid="uid://c5kq15ymk63y6" path="res://scripts/CardTransformation.gd" id="3_m66ed"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_ryjdo"]
+
+[sub_resource type="Resource" id="Resource_d3lpe"]
+script = ExtResource("2_m66ed")
+delete_source_verb = true
+
+[resource]
+script = ExtResource("3_d3lpe")
+id = "无事发生"
+title = "无事发生"
+description = "确实有这种可能。"
+duration = 3.0
+auto_start = true
+rewards = Array[ExtResource("2_m66ed")]([SubResource("Resource_d3lpe")])

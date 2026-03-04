@@ -1,0 +1,101 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=26 format=3 uid="uid://cefv48yaax5fx"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_swdui"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_8wqww"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_rvj06"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_8wqww"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_gttea"]
+[ext_resource type="Resource" uid="uid://jcqyrh0wsgjn" path="res://data/feceva/Events/德军行动/轰炸成功结果.tres" id="4_5tf8g"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_gttea"]
+[ext_resource type="Resource" uid="uid://qwbguj6seoii" path="res://data/feceva/Events/德军行动/轰炸失败结果.tres" id="4_y8n6p"]
+
+[sub_resource type="Resource" id="Resource_8wqww"]
+script = ExtResource("2_8wqww")
+tag = "情报"
+
+[sub_resource type="Resource" id="Resource_7gch3"]
+script = ExtResource("3_gttea")
+target_event = ExtResource("4_y8n6p")
+
+[sub_resource type="Resource" id="Resource_5tf8g"]
+script = ExtResource("1_swdui")
+outcomes = Array[ExtResource("3_gttea")]([SubResource("Resource_7gch3")])
+conditions = Array[ExtResource("2_8wqww")]([SubResource("Resource_8wqww")])
+
+[sub_resource type="Resource" id="Resource_y8n6p"]
+script = ExtResource("2_8wqww")
+tag = "火车站"
+
+[sub_resource type="Resource" id="Resource_2sgql"]
+script = ExtResource("3_gttea")
+target_event = ExtResource("4_y8n6p")
+probability = 0.7
+
+[sub_resource type="Resource" id="Resource_m5mab"]
+script = ExtResource("3_gttea")
+target_event = ExtResource("4_5tf8g")
+probability = 0.3
+
+[sub_resource type="Resource" id="Resource_gttea"]
+script = ExtResource("1_swdui")
+outcomes = Array[ExtResource("3_gttea")]([SubResource("Resource_2sgql"), SubResource("Resource_m5mab")])
+conditions = Array[ExtResource("2_8wqww")]([SubResource("Resource_y8n6p")])
+
+[sub_resource type="Resource" id="Resource_pl024"]
+script = ExtResource("2_8wqww")
+tag = "厂区"
+
+[sub_resource type="Resource" id="Resource_xrp1k"]
+script = ExtResource("3_gttea")
+target_event = ExtResource("4_y8n6p")
+probability = 0.7
+
+[sub_resource type="Resource" id="Resource_vo0ew"]
+script = ExtResource("3_gttea")
+target_event = ExtResource("4_5tf8g")
+probability = 0.3
+
+[sub_resource type="Resource" id="Resource_0qo44"]
+script = ExtResource("1_swdui")
+outcomes = Array[ExtResource("3_gttea")]([SubResource("Resource_xrp1k"), SubResource("Resource_vo0ew")])
+conditions = Array[ExtResource("2_8wqww")]([SubResource("Resource_pl024")])
+
+[sub_resource type="Resource" id="Resource_31q34"]
+script = ExtResource("2_8wqww")
+tag = "防线"
+
+[sub_resource type="Resource" id="Resource_tv8ar"]
+script = ExtResource("3_gttea")
+target_event = ExtResource("4_y8n6p")
+probability = 0.7
+
+[sub_resource type="Resource" id="Resource_t5bh3"]
+script = ExtResource("3_gttea")
+target_event = ExtResource("4_5tf8g")
+probability = 0.3
+
+[sub_resource type="Resource" id="Resource_par8o"]
+script = ExtResource("1_swdui")
+outcomes = Array[ExtResource("3_gttea")]([SubResource("Resource_tv8ar"), SubResource("Resource_t5bh3")])
+conditions = Array[ExtResource("2_8wqww")]([SubResource("Resource_31q34")])
+
+[sub_resource type="Resource" id="Resource_swdui"]
+script = ExtResource("4_gttea")
+required_tags = Array[String](["轰炸目标"])
+force_inhale = true
+action_type = "reward"
+
+[sub_resource type="Resource" id="Resource_8khtl"]
+script = ExtResource("4_gttea")
+force_inhale = true
+specific_card_ids = Array[String](["qb04"])
+action_type = "consume"
+
+[resource]
+script = ExtResource("3_8wqww")
+id = "轰炸"
+title = "敌机轰炸"
+description = "德国空军不太骇人的轰炸"
+slots = Array[ExtResource("4_gttea")]([SubResource("Resource_swdui"), SubResource("Resource_8khtl")])
+auto_start = true
+branches = Array[ExtResource("1_swdui")]([SubResource("Resource_5tf8g"), SubResource("Resource_gttea"), SubResource("Resource_0qo44"), SubResource("Resource_par8o")])

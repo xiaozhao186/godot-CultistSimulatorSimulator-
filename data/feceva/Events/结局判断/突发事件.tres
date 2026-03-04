@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=7 format=3 uid="uid://dr5bjdgk67783"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_rbp1r"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_y164y"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_lhca1"]
+[ext_resource type="Script" uid="uid://c5kq15ymk63y6" path="res://scripts/CardTransformation.gd" id="3_y164y"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_lrpq8"]
+
+[sub_resource type="Resource" id="Resource_lhca1"]
+script = ExtResource("2_y164y")
+verb_ids_to_spawn = Array[String](["tf01"])
+
+[resource]
+script = ExtResource("3_lhca1")
+id = "突发事件"
+duration = 1.0
+auto_start = true
+auto_collect = true
+rewards = Array[ExtResource("2_y164y")]([SubResource("Resource_lhca1")])

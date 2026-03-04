@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://c4ivx6aw60e8o"]
+
+[ext_resource type="Texture2D" uid="uid://bueepnmjt8jnn" path="res://pic/fecevap/p12.jpg" id="1_g6lau"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="2_q8ml5"]
+
+[resource]
+script = ExtResource("2_q8ml5")
+id = "am05"
+name = "侦察小队"
+description = "可进行侦察任务"
+icon = ExtResource("1_g6lau")
+tags = Array[String](["军事单位", "预备", "侦察"])
+attributes = Dictionary[StringName, int]({
+&"火力": 2
+})
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

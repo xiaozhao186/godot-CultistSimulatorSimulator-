@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://dtmj45olhbk0k"]
+
+[ext_resource type="Texture2D" uid="uid://bwa3m0ao3hl5r" path="res://pic/fecevap/p17.jpg" id="1_agvhb"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="2_sfgrc"]
+
+[resource]
+script = ExtResource("2_sfgrc")
+id = "wk07"
+name = "工厂设备"
+description = "工厂设备"
+icon = ExtResource("1_agvhb")
+tags = Array[String](["物资"])
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

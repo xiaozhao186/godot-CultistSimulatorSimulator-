@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=7 format=3 uid="uid://c1mbd5y7u21q"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_fambp"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_oiuxi"]
+[ext_resource type="Script" uid="uid://c5kq15ymk63y6" path="res://scripts/CardTransformation.gd" id="3_oiuxi"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_ve3it"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_gmd5u"]
+
+[sub_resource type="Resource" id="Resource_ve3it"]
+script = ExtResource("2_oiuxi")
+ending_index = 1
+
+[resource]
+script = ExtResource("3_ve3it")
+id = "失败"
+description = "lossss"
+duration = 1.0
+auto_start = true
+auto_collect = true
+rewards = Array[ExtResource("2_oiuxi")]([SubResource("Resource_ve3it")])

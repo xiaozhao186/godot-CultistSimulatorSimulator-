@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=8 format=3 uid="uid://cfbx67jio72s8"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_07rn6"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_fxtcb"]
+[ext_resource type="Script" uid="uid://c5kq15ymk63y6" path="res://scripts/CardTransformation.gd" id="3_8knek"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="4_c3ks1"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="5_pdqx2"]
+
+[sub_resource type="Resource" id="Resource_tcrmo"]
+script = ExtResource("3_8knek")
+required_card_id = "wk04"
+action = "return"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_l13cr"]
+script = ExtResource("2_fxtcb")
+delete_source_verb = true
+transformations = Array[ExtResource("3_8knek")]([SubResource("Resource_tcrmo")])
+
+[resource]
+script = ExtResource("4_c3ks1")
+id = "车站事故2"
+title = "火车站事故"
+description = "车站出事了，一台大型设备不慎从吊机上脱落，把平板车砸了个稀碎，所幸并没有造成太严重的后果。"
+duration = 1.0
+auto_start = true
+rewards = Array[ExtResource("2_fxtcb")]([SubResource("Resource_l13cr")])

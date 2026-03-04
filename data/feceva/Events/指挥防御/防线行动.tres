@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=19 format=3 uid="uid://khkmtk7ajyoe"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_0gmad"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_3dl3s"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_w2qcq"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_3dl3s"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_se0wf"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_se0wf"]
+[ext_resource type="Resource" uid="uid://c7suf8b7gc3va" path="res://data/feceva/Events/指挥防御/提升稳固度.tres" id="4_xloou"]
+[ext_resource type="Resource" uid="uid://dhxemx3q6a3y" path="res://data/feceva/Events/指挥防御/侦察行动.tres" id="5_xloou"]
+
+[sub_resource type="Resource" id="Resource_owffl"]
+script = ExtResource("2_3dl3s")
+tag = "防线"
+
+[sub_resource type="Resource" id="Resource_ty8fd"]
+script = ExtResource("2_3dl3s")
+tag = "工厂工人"
+
+[sub_resource type="Resource" id="Resource_3dl3s"]
+script = ExtResource("3_se0wf")
+target_event = ExtResource("4_xloou")
+
+[sub_resource type="Resource" id="Resource_xloou"]
+script = ExtResource("1_0gmad")
+outcomes = Array[ExtResource("3_se0wf")]([SubResource("Resource_3dl3s")])
+conditions = Array[ExtResource("2_3dl3s")]([SubResource("Resource_owffl"), SubResource("Resource_ty8fd")])
+
+[sub_resource type="Resource" id="Resource_xl7sq"]
+script = ExtResource("2_3dl3s")
+tag = "防线"
+
+[sub_resource type="Resource" id="Resource_f6bje"]
+script = ExtResource("2_3dl3s")
+tag = "侦察"
+
+[sub_resource type="Resource" id="Resource_38spb"]
+script = ExtResource("3_se0wf")
+target_event = ExtResource("5_xloou")
+
+[sub_resource type="Resource" id="Resource_se0wf"]
+script = ExtResource("1_0gmad")
+outcomes = Array[ExtResource("3_se0wf")]([SubResource("Resource_38spb")])
+conditions = Array[ExtResource("2_3dl3s")]([SubResource("Resource_xl7sq"), SubResource("Resource_f6bje")])
+
+[sub_resource type="Resource" id="Resource_0gmad"]
+script = ExtResource("4_se0wf")
+
+[sub_resource type="Resource" id="Resource_w2qcq"]
+script = ExtResource("4_se0wf")
+
+[resource]
+script = ExtResource("3_3dl3s")
+id = "防线行动"
+title = "防线行动"
+description = "加固防线或派出侦察兵"
+slots = Array[ExtResource("4_se0wf")]([SubResource("Resource_0gmad"), SubResource("Resource_w2qcq")])
+duration = 1.0
+instant_branches = Array[ExtResource("1_0gmad")]([SubResource("Resource_xloou"), SubResource("Resource_se0wf")])

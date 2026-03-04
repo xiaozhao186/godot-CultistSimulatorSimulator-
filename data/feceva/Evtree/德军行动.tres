@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="EventGraphData" load_steps=2 format=3 uid="uid://mfyoow0a31qo"]
+
+[ext_resource type="Script" uid="uid://cqb5k7gwr66qc" path="res://addons/event_chain_editor/resources/event_graph_data.gd" id="1_raa5p"]
+
+[resource]
+script = ExtResource("1_raa5p")
+nodes = {
+"res://data/feceva/Events/德军行动/吸入东l.tres": Vector2(360, -3380),
+"res://data/feceva/Events/德军行动/吸入东w.tres": Vector2(360, -4320),
+"res://data/feceva/Events/德军行动/吸入北l.tres": Vector2(380, -5900),
+"res://data/feceva/Events/德军行动/吸入北w.tres": Vector2(380, -6860),
+"res://data/feceva/Events/德军行动/吸入南l.tres": Vector2(380, -800),
+"res://data/feceva/Events/德军行动/吸入南w.tres": Vector2(380, -1740),
+"res://data/feceva/Events/德军行动/情报战斗.tres": Vector2(800, -4920),
+"res://data/feceva/Events/德军行动/战斗失败.tres": Vector2(2660, -2320),
+"res://data/feceva/Events/德军行动/战斗胜利.tres": Vector2(2660, -3340),
+"res://data/feceva/Events/德军行动/步兵冲击.tres": Vector2(-3440, -5420),
+"res://data/feceva/Events/德军行动/步兵冲击判定.tres": Vector2(-2600, -6660),
+"res://data/feceva/Events/德军行动/步兵冲击判定1.tres": Vector2(-2600, -4460),
+"res://data/feceva/Events/德军行动/步兵冲击判定2.tres": Vector2(-2600, -2280),
+"res://data/feceva/Events/德军行动/轰炸.tres": Vector2(-3120, 0),
+"res://data/feceva/Events/德军行动/轰炸失败结果.tres": Vector2(-2300, 1240),
+"res://data/feceva/Events/德军行动/轰炸成功结果.tres": Vector2(-2300, 520),
+"res://data/feceva/Events/德军行动/轻装甲冲击.tres": Vector2(-3660, -3980),
+"res://data/feceva/Events/德军行动/轻装甲冲击判定.tres": Vector2(-1000, -7620),
+"res://data/feceva/Events/德军行动/轻装甲冲击判定1.tres": Vector2(-1020, -4760),
+"res://data/feceva/Events/德军行动/轻装甲冲击判定2.tres": Vector2(-1020, -2040),
+"res://data/feceva/Events/德军行动/进程1.tres": Vector2(-3900, -2680),
+"res://data/feceva/Events/德军行动/阶段一.tres": Vector2(-5420, -3720),
+"res://data/feceva/Events/德军行动/阶段二.tres": Vector2(-5220, -2300)
+}
+metadata/_custom_type_script = "uid://cqb5k7gwr66qc"

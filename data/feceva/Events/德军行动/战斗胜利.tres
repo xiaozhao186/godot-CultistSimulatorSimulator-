@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=8 format=3 uid="uid://djm44gu1mx80s"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_lwe7r"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_md14k"]
+[ext_resource type="Script" uid="uid://c5kq15ymk63y6" path="res://scripts/CardTransformation.gd" id="3_ew3el"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="4_nydfc"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="5_evwwd"]
+
+[sub_resource type="Resource" id="Resource_ua80x"]
+script = ExtResource("3_ew3el")
+action = "return"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_sr6p3"]
+script = ExtResource("2_md14k")
+transformations = Array[ExtResource("3_ew3el")]([SubResource("Resource_ua80x")])
+
+[resource]
+script = ExtResource("4_nydfc")
+id = "战斗胜利"
+title = "战斗胜利"
+description = "德国佬被击退了"
+duration = 1.0
+auto_start = true
+rewards = Array[ExtResource("2_md14k")]([SubResource("Resource_sr6p3")])

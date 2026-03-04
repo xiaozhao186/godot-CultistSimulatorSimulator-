@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=7 format=3 uid="uid://b8o5b7ynseyo4"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_hoomr"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_balvw"]
+[ext_resource type="Texture2D" uid="uid://dj1px7bo608sv" path="res://icon.svg" id="2_qhs8a"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_qhs8a"]
+[ext_resource type="Resource" uid="uid://cwadif3ndosak" path="res://data/test/Events/beforetest/evr02.tres" id="4_mdffu"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_ojt8m"]
+
+[resource]
+script = ExtResource("3_qhs8a")
+id = "ev02"
+title = "大报酬"
+description = "这是大报酬"
+image = ExtResource("2_qhs8a")
+duration = 0.0
+rewards = Array[ExtResource("2_balvw")]([ExtResource("4_mdffu")])
+metadata/_custom_type_script = "uid://d22geur8maor1"

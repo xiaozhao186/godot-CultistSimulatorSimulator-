@@ -1,0 +1,20 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Common Godot ignores
+*.tmp
+*.log
+*.bak
+*.swp
+*.DS_Store
+.directory
+
+# Binary files
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Exported files (adjust if you use a different export path)
+/export/

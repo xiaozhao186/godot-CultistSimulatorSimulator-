@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=17 format=3 uid="uid://gmcwygbddlkn"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_shqhd"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_7t2sv"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_77hdb"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_1gs03"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_7t2sv"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_1gs03"]
+[ext_resource type="Resource" uid="uid://dpui21gu311au" path="res://data/feceva/Events/德军行动/步兵冲击.tres" id="4_kfg7j"]
+[ext_resource type="Resource" uid="uid://cefv48yaax5fx" path="res://data/feceva/Events/德军行动/轰炸.tres" id="5_4ow26"]
+[ext_resource type="Resource" uid="uid://c1ycikbgdco37" path="res://data/feceva/Events/德军行动/进程1.tres" id="6_s5k1p"]
+
+[sub_resource type="Resource" id="Resource_s5k1p"]
+script = ExtResource("2_7t2sv")
+type = 4
+attribute = "撤离度"
+card_id = "cp00"
+value = 1
+op = 2
+
+[sub_resource type="Resource" id="Resource_7t2sv"]
+script = ExtResource("3_1gs03")
+target_event = ExtResource("4_kfg7j")
+probability = 0.7
+
+[sub_resource type="Resource" id="Resource_li3rv"]
+script = ExtResource("3_1gs03")
+target_event = ExtResource("5_4ow26")
+probability = 0.3
+
+[sub_resource type="Resource" id="Resource_kfg7j"]
+script = ExtResource("1_shqhd")
+outcomes = Array[ExtResource("3_1gs03")]([SubResource("Resource_7t2sv"), SubResource("Resource_li3rv")])
+conditions = Array[ExtResource("2_7t2sv")]([SubResource("Resource_s5k1p")])
+
+[sub_resource type="Resource" id="Resource_0w307"]
+script = ExtResource("2_7t2sv")
+type = 4
+tag = "cp01"
+attribute = "撤离度"
+card_id = "cp01"
+value = 2
+op = 4
+
+[sub_resource type="Resource" id="Resource_yrkdd"]
+script = ExtResource("3_1gs03")
+target_event = ExtResource("6_s5k1p")
+
+[sub_resource type="Resource" id="Resource_4ow26"]
+script = ExtResource("1_shqhd")
+outcomes = Array[ExtResource("3_1gs03")]([SubResource("Resource_yrkdd")])
+conditions = Array[ExtResource("2_7t2sv")]([SubResource("Resource_0w307")])
+
+[resource]
+script = ExtResource("3_7t2sv")
+id = "阶段一"
+title = "德军攻势阶段一"
+description = "德军正在策划进攻"
+duration = 15.0
+auto_start = true
+branches = Array[ExtResource("1_shqhd")]([SubResource("Resource_kfg7j"), SubResource("Resource_4ow26")])

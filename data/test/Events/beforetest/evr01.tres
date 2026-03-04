@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="EventRewardData" load_steps=2 format=3 uid="uid://b4x76om87h4p1"]
+
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="1_u02b2"]
+
+[resource]
+script = ExtResource("1_u02b2")
+card_ids = Array[String](["cr03"])
+metadata/_custom_type_script = "uid://cljq581cxshph"

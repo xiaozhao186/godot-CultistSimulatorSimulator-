@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://cec77g7rxrw2m"]
+
+[ext_resource type="Texture2D" uid="uid://dihy6ccxnk7bw" path="res://pic/fecevap/p7.jpg" id="1_lyy5y"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="1_t7uqm"]
+
+[resource]
+script = ExtResource("1_t7uqm")
+id = "wk01"
+name = "工厂工人"
+description = "xx工厂的工人"
+icon = ExtResource("1_lyy5y")
+tags = Array[String](["非军事单位", "工厂工人"])
+stackable = true
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

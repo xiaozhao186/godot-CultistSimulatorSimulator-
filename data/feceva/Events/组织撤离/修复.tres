@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=16 format=3 uid="uid://b4hm342anaoll"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_t70ff"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_cfski"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_evj5f"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_1hh3a"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_evj5f"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_1hh3a"]
+[ext_resource type="Resource" uid="uid://c7bs6s5nlwic7" path="res://data/feceva/Events/组织撤离/修复厂区.tres" id="4_hdksg"]
+[ext_resource type="Resource" uid="uid://bee62m7kikuf" path="res://data/feceva/Events/组织撤离/修复车站.tres" id="5_hdksg"]
+
+[sub_resource type="Resource" id="Resource_1hh3a"]
+script = ExtResource("2_evj5f")
+tag = "火车站"
+
+[sub_resource type="Resource" id="Resource_5xdu4"]
+script = ExtResource("3_1hh3a")
+target_event = ExtResource("5_hdksg")
+
+[sub_resource type="Resource" id="Resource_hdksg"]
+script = ExtResource("1_t70ff")
+outcomes = Array[ExtResource("3_1hh3a")]([SubResource("Resource_5xdu4")])
+conditions = Array[ExtResource("2_evj5f")]([SubResource("Resource_1hh3a")])
+
+[sub_resource type="Resource" id="Resource_ayr6y"]
+script = ExtResource("2_evj5f")
+tag = "厂区"
+
+[sub_resource type="Resource" id="Resource_5aiqe"]
+script = ExtResource("3_1hh3a")
+target_event = ExtResource("4_hdksg")
+
+[sub_resource type="Resource" id="Resource_evj5f"]
+script = ExtResource("1_t70ff")
+outcomes = Array[ExtResource("3_1hh3a")]([SubResource("Resource_5aiqe")])
+conditions = Array[ExtResource("2_evj5f")]([SubResource("Resource_ayr6y")])
+
+[sub_resource type="Resource" id="Resource_t70ff"]
+script = ExtResource("4_1hh3a")
+required_tags = Array[String](["混乱"])
+
+[resource]
+script = ExtResource("3_evj5f")
+id = "修复"
+title = "恢复撤离"
+description = "德军的袭击结束了，现在得处理那些废墟了"
+slots = Array[ExtResource("4_1hh3a")]([SubResource("Resource_t70ff")])
+duration = 1.0
+instant_branches = Array[ExtResource("1_t70ff")]([SubResource("Resource_hdksg"), SubResource("Resource_evj5f")])

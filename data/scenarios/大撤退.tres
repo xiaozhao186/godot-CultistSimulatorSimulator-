@@ -1,0 +1,111 @@
+[gd_resource type="Resource" script_class="ScenarioData" load_steps=40 format=3 uid="uid://bb7xrxjauercq"]
+
+[ext_resource type="AudioStream" uid="uid://cprgtxobkiaac" path="res://sounds/music/在满洲的山岗上 На сопках Маньчжурии.mp3" id="1_8pvuj"]
+[ext_resource type="Script" uid="uid://brsms0wysydpj" path="res://scripts/EndingData.gd" id="1_lv41x"]
+[ext_resource type="Script" uid="uid://c5sld4afhnokd" path="res://scripts/ScenarioData.gd" id="1_scenario"]
+[ext_resource type="Texture2D" uid="uid://dihy6ccxnk7bw" path="res://pic/fecevap/p7.jpg" id="2_qubkg"]
+[ext_resource type="Resource" uid="uid://nvmjyyyxigqy" path="res://data/feceva/Kards/btl/步兵排.tres" id="2_wnykk"]
+[ext_resource type="AudioStream" uid="uid://cg6tk4jfsl614" path="res://sounds/music/我们的近卫军.mp3" id="3_8pvuj"]
+[ext_resource type="Texture2D" uid="uid://7xfhu6mi62pf" path="res://pic/fecevap/p8.jpg" id="3_gwgu0"]
+[ext_resource type="Resource" uid="uid://cfhr8j5571cmd" path="res://data/feceva/Kards/btl/机枪班组.tres" id="3_lv41x"]
+[ext_resource type="Script" uid="uid://dnrwqxpea4flv" path="res://scripts/ScenarioInitialCardEntry.gd" id="3_qubkg"]
+[ext_resource type="Resource" uid="uid://4sk184xxxdcp" path="res://data/feceva/Kards/btl/北部防线-2.tres" id="4_qubkg"]
+[ext_resource type="Script" uid="uid://i1lcnlm6wld" path="res://scripts/VerbData.gd" id="4_udqe0"]
+[ext_resource type="Resource" uid="uid://c5v3h0s13ehkx" path="res://data/feceva/Verbs/德军行动阶段一.tres" id="5_2228r"]
+[ext_resource type="AudioStream" uid="uid://geaiytjxm645" path="res://sounds/music/苏军失败.mp3" id="5_p124o"]
+[ext_resource type="Resource" uid="uid://b5h5573h7wgug" path="res://data/feceva/Kards/btl/东部防线-2.tres" id="5_tdc1l"]
+[ext_resource type="Resource" uid="uid://crutuvr63quji" path="res://data/feceva/Verbs/指挥防御.tres" id="6_6djoh"]
+[ext_resource type="Resource" uid="uid://6q7akqi3yvjo" path="res://data/feceva/Kards/btl/南部防线-2.tres" id="6_sf36b"]
+[ext_resource type="Resource" uid="uid://bcl0h1uf7imsj" path="res://data/feceva/Kards/run/火车站.tres" id="7_80mw6"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="7_oulfe"]
+[ext_resource type="Resource" uid="uid://cw76hvj5g3k0x" path="res://data/feceva/Kards/run/撤离度0.tres" id="8_4ul4a"]
+[ext_resource type="Resource" uid="uid://c6nardif6281j" path="res://data/feceva/Kards/run/工程师.tres" id="9_p7btq"]
+[ext_resource type="Resource" uid="uid://cec77g7rxrw2m" path="res://data/feceva/Kards/run/工厂工人.tres" id="10_e5oih"]
+[ext_resource type="Resource" uid="uid://bm4l7n663ykbl" path="res://data/feceva/Kards/run/厂区.tres" id="13_mpnw5"]
+[ext_resource type="Resource" uid="uid://cbwnf3gwfdlxy" path="res://data/feceva/Verbs/组织撤离.tres" id="14_djifu"]
+[ext_resource type="Resource" uid="uid://bwk88453035uk" path="res://data/feceva/Verbs/结局判断.tres" id="17_tdc1l"]
+[ext_resource type="Resource" uid="uid://c4ivx6aw60e8o" path="res://data/feceva/Kards/zhen/侦察小队.tres" id="18_5v63e"]
+[ext_resource type="Resource" uid="uid://payv8ec36jsb" path="res://data/feceva/Verbs/增援1.tres" id="23_p124o"]
+
+[sub_resource type="Resource" id="Resource_6h6fy"]
+script = ExtResource("1_lv41x")
+title = "胜利"
+body = "苏大友百万撤离，德佬已急哭。"
+image = ExtResource("2_qubkg")
+bgm = ExtResource("3_8pvuj")
+metadata/_custom_type_script = "uid://brsms0wysydpj"
+
+[sub_resource type="Resource" id="Resource_dgx2f"]
+script = ExtResource("1_lv41x")
+title = "失败"
+body = "胜败乃兵家常事，下一次我们会赢回来的。"
+image = ExtResource("3_gwgu0")
+bgm = ExtResource("5_p124o")
+metadata/_custom_type_script = "uid://brsms0wysydpj"
+
+[sub_resource type="Resource" id="Resource_tdc1l"]
+script = ExtResource("3_qubkg")
+card = ExtResource("10_e5oih")
+count = 3
+metadata/_custom_type_script = "uid://dnrwqxpea4flv"
+
+[sub_resource type="Resource" id="Resource_sf36b"]
+script = ExtResource("3_qubkg")
+card = ExtResource("7_80mw6")
+metadata/_custom_type_script = "uid://dnrwqxpea4flv"
+
+[sub_resource type="Resource" id="Resource_80mw6"]
+script = ExtResource("3_qubkg")
+card = ExtResource("8_4ul4a")
+metadata/_custom_type_script = "uid://dnrwqxpea4flv"
+
+[sub_resource type="Resource" id="Resource_4ul4a"]
+script = ExtResource("3_qubkg")
+card = ExtResource("9_p7btq")
+metadata/_custom_type_script = "uid://dnrwqxpea4flv"
+
+[sub_resource type="Resource" id="Resource_p7btq"]
+script = ExtResource("3_qubkg")
+card = ExtResource("2_wnykk")
+count = 3
+metadata/_custom_type_script = "uid://dnrwqxpea4flv"
+
+[sub_resource type="Resource" id="Resource_e5oih"]
+script = ExtResource("3_qubkg")
+card = ExtResource("5_tdc1l")
+metadata/_custom_type_script = "uid://dnrwqxpea4flv"
+
+[sub_resource type="Resource" id="Resource_djifu"]
+script = ExtResource("3_qubkg")
+card = ExtResource("4_qubkg")
+metadata/_custom_type_script = "uid://dnrwqxpea4flv"
+
+[sub_resource type="Resource" id="Resource_n3smg"]
+script = ExtResource("3_qubkg")
+card = ExtResource("6_sf36b")
+metadata/_custom_type_script = "uid://dnrwqxpea4flv"
+
+[sub_resource type="Resource" id="Resource_efwxo"]
+script = ExtResource("3_qubkg")
+card = ExtResource("3_lv41x")
+metadata/_custom_type_script = "uid://dnrwqxpea4flv"
+
+[sub_resource type="Resource" id="Resource_gwgu0"]
+script = ExtResource("3_qubkg")
+card = ExtResource("13_mpnw5")
+metadata/_custom_type_script = "uid://dnrwqxpea4flv"
+
+[sub_resource type="Resource" id="Resource_7ngpr"]
+script = ExtResource("3_qubkg")
+card = ExtResource("18_5v63e")
+metadata/_custom_type_script = "uid://dnrwqxpea4flv"
+
+[resource]
+script = ExtResource("1_scenario")
+id = "胜利之路"
+title = "大撤退"
+description = "Defend the factory and evacuate the equipment before the enemy overruns the position."
+bgm_playlist = Array[AudioStream]([ExtResource("1_8pvuj")])
+initial_card_entries = Array[ExtResource("3_qubkg")]([SubResource("Resource_tdc1l"), SubResource("Resource_sf36b"), SubResource("Resource_80mw6"), SubResource("Resource_4ul4a"), SubResource("Resource_p7btq"), SubResource("Resource_e5oih"), SubResource("Resource_djifu"), SubResource("Resource_n3smg"), SubResource("Resource_efwxo"), SubResource("Resource_gwgu0"), SubResource("Resource_7ngpr")])
+initial_verbs = Array[ExtResource("4_udqe0")]([ExtResource("5_2228r"), ExtResource("6_6djoh"), ExtResource("14_djifu"), ExtResource("17_tdc1l"), ExtResource("23_p124o")])
+endings = Array[ExtResource("1_lv41x")]([SubResource("Resource_6h6fy"), SubResource("Resource_dgx2f")])

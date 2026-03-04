@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=11 format=3 uid="uid://b4us0goihj2es"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_fdac0"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_5osmh"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_p55ee"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_5osmh"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_22jvh"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_22jvh"]
+[ext_resource type="Resource" uid="uid://df6t8rqicxjad" path="res://data/feceva/Events/德军行动/战斗失败.tres" id="4_gbxfn"]
+
+[sub_resource type="Resource" id="Resource_5osmh"]
+script = ExtResource("3_22jvh")
+target_event = ExtResource("4_gbxfn")
+
+[sub_resource type="Resource" id="Resource_gbxfn"]
+script = ExtResource("1_fdac0")
+outcomes = Array[ExtResource("3_22jvh")]([SubResource("Resource_5osmh")])
+
+[sub_resource type="Resource" id="Resource_fdac0"]
+script = ExtResource("4_22jvh")
+required_tags = Array[String](["防线", "北部"])
+force_inhale = true
+action_type = "reward"
+
+[resource]
+script = ExtResource("3_5osmh")
+id = "吸入北l"
+title = "北侧防线战斗中"
+description = "l"
+slots = Array[ExtResource("4_22jvh")]([SubResource("Resource_fdac0")])
+duration = 3.0
+auto_start = true
+branches = Array[ExtResource("1_fdac0")]([SubResource("Resource_gbxfn")])

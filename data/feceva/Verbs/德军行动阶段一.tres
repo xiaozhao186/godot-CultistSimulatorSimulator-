@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="VerbData" load_steps=4 format=3 uid="uid://c5v3h0s13ehkx"]
+
+[ext_resource type="Resource" uid="uid://gmcwygbddlkn" path="res://data/feceva/Events/德军行动/阶段一.tres" id="1_3uy5y"]
+[ext_resource type="Script" uid="uid://i1lcnlm6wld" path="res://scripts/VerbData.gd" id="2_3uy5y"]
+[ext_resource type="Texture2D" uid="uid://de8etl171bnlh" path="res://pic/fecevap/pv1.jpg" id="2_w54p3"]
+
+[resource]
+script = ExtResource("2_3uy5y")
+id = "xd01"
+title = "德军行动"
+description = "德军正在策划对工厂防线的进攻"
+icon = ExtResource("2_w54p3")
+default_event = ExtResource("1_3uy5y")
+metadata/_custom_type_script = "uid://i1lcnlm6wld"

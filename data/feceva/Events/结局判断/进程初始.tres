@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=12 format=3 uid="uid://c0qsncvwvfdmj"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_15gqe"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_4dvmb"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_d3fu4"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_d3fu4"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_idirc"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_idirc"]
+[ext_resource type="Resource" uid="uid://dr5bjdgk67783" path="res://data/feceva/Events/结局判断/突发事件.tres" id="4_t7akx"]
+[ext_resource type="Resource" uid="uid://cq8qrkagcf4qc" path="res://data/feceva/Events/结局判断/nting.tres" id="5_t7akx"]
+
+[sub_resource type="Resource" id="Resource_d3fu4"]
+script = ExtResource("3_idirc")
+target_event = ExtResource("4_t7akx")
+probability = 0.3
+
+[sub_resource type="Resource" id="Resource_idirc"]
+script = ExtResource("3_idirc")
+target_event = ExtResource("5_t7akx")
+probability = 0.7
+
+[sub_resource type="Resource" id="Resource_t7akx"]
+script = ExtResource("1_15gqe")
+outcomes = Array[ExtResource("3_idirc")]([SubResource("Resource_d3fu4"), SubResource("Resource_idirc")])
+
+[resource]
+script = ExtResource("3_d3fu4")
+id = "进程初始"
+auto_start = true
+auto_collect = true
+branches = Array[ExtResource("1_15gqe")]([SubResource("Resource_t7akx")])

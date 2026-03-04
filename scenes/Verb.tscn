@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://w5khe032x7le"]
+
+[ext_resource type="Script" uid="uid://4gokeo311tlr" path="res://scripts/Verb.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://cy4pp2lnfgpux" path="res://pic/base/verblay.png" id="2_bg"]
+[ext_resource type="Texture2D" uid="uid://d0ytkkmn1jbcf" path="res://pic/fecevap/pv4.jpg" id="3_icon"]
+[ext_resource type="Texture2D" uid="uid://dbnatjlcwf3md" path="res://pic/base/ring.png" id="4_ring"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(100, 100)
+
+[node name="Verb" type="Area2D"]
+script = ExtResource("1_script")
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("2_bg")
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_icon")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_1")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -50.0
+offset_top = 85.0
+offset_right = 50.0
+offset_bottom = 108.0
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="TextureProgressBar" parent="."]
+modulate = Color(1, 1, 1, 0.8)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+step = 0.01
+fill_mode = 4
+nine_patch_stretch = true
+texture_progress = ExtResource("4_ring")
+
+[node name="TimerLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1

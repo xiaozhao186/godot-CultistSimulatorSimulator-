@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=11 format=3 uid="uid://b0kobkeugvfl6"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_ack4u"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_4kqqy"]
+[ext_resource type="Script" uid="uid://c5kq15ymk63y6" path="res://scripts/CardTransformation.gd" id="3_4kqqy"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_qx36h"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_a8svw"]
+
+[sub_resource type="Resource" id="Resource_4kqqy"]
+script = ExtResource("3_4kqqy")
+required_card_id = "cp00"
+resulting_card_id = "cp01"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_a8svw"]
+script = ExtResource("3_4kqqy")
+required_card_id = "cp01"
+resulting_card_id = "cp02"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_bk3cm"]
+script = ExtResource("3_4kqqy")
+required_card_id = "cp02"
+resulting_card_id = "cp03"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_wrabh"]
+script = ExtResource("3_4kqqy")
+required_card_id = "cp03"
+resulting_card_id = "cp04"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_qx36h"]
+script = ExtResource("2_4kqqy")
+transformations = Array[ExtResource("3_4kqqy")]([SubResource("Resource_4kqqy"), SubResource("Resource_a8svw"), SubResource("Resource_bk3cm"), SubResource("Resource_wrabh")])
+
+[resource]
+script = ExtResource("3_qx36h")
+id = "发车完成"
+title = "发车完成"
+description = "列车远去"
+duration = 1.0
+auto_start = true
+rewards = Array[ExtResource("2_4kqqy")]([SubResource("Resource_qx36h")])

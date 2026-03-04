@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://cpukoljt7gix4"]
+
+[ext_resource type="Texture2D" uid="uid://cwqqbjqkdrck2" path="res://pic/fecevap/p15.jpg" id="1_5hgyp"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="2_frq0u"]
+
+[resource]
+script = ExtResource("2_frq0u")
+id = "qb04"
+name = "情报-空袭"
+description = "侦查兵传回的关于德军后续动向的情报"
+icon = ExtResource("1_5hgyp")
+tags = Array[String](["情报"])
+lifetime = 30.0
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

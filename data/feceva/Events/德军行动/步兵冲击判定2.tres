@@ -1,0 +1,133 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=31 format=3 uid="uid://b0mc3khnbvcw7"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_b4av6"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_odxqp"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_xax37"]
+[ext_resource type="Resource" uid="uid://wix5rcndgytm" path="res://data/feceva/Events/德军行动/吸入南w.tres" id="4_odxqp"]
+[ext_resource type="Resource" uid="uid://cchkp7qcxqqo4" path="res://data/feceva/Events/德军行动/吸入南l.tres" id="5_xax37"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="6_4li53"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="7_a1m0a"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="8_nnq3o"]
+
+[sub_resource type="Resource" id="Resource_6plpf"]
+script = ExtResource("2_odxqp")
+type = 1
+attribute = "火力"
+value = 3
+
+[sub_resource type="Resource" id="Resource_rxhj2"]
+script = ExtResource("2_odxqp")
+type = 1
+attribute = "支援"
+value = 2
+
+[sub_resource type="Resource" id="Resource_7lmtp"]
+script = ExtResource("3_xax37")
+target_event = ExtResource("4_odxqp")
+probability = 0.9
+
+[sub_resource type="Resource" id="Resource_ioqdi"]
+script = ExtResource("3_xax37")
+target_event = ExtResource("5_xax37")
+probability = 0.1
+
+[sub_resource type="Resource" id="Resource_av8ws"]
+script = ExtResource("1_b4av6")
+outcomes = Array[ExtResource("3_xax37")]([SubResource("Resource_7lmtp"), SubResource("Resource_ioqdi")])
+conditions = Array[ExtResource("2_odxqp")]([SubResource("Resource_6plpf"), SubResource("Resource_rxhj2")])
+
+[sub_resource type="Resource" id="Resource_qnlpo"]
+script = ExtResource("2_odxqp")
+type = 1
+attribute = "火力"
+value = 2
+
+[sub_resource type="Resource" id="Resource_61odx"]
+script = ExtResource("3_xax37")
+target_event = ExtResource("4_odxqp")
+probability = 0.6
+
+[sub_resource type="Resource" id="Resource_du6g1"]
+script = ExtResource("3_xax37")
+target_event = ExtResource("5_xax37")
+probability = 0.4
+
+[sub_resource type="Resource" id="Resource_f8a4b"]
+script = ExtResource("1_b4av6")
+outcomes = Array[ExtResource("3_xax37")]([SubResource("Resource_61odx"), SubResource("Resource_du6g1")])
+conditions = Array[ExtResource("2_odxqp")]([SubResource("Resource_qnlpo")])
+
+[sub_resource type="Resource" id="Resource_ulurx"]
+script = ExtResource("2_odxqp")
+type = 1
+attribute = "火力"
+value = 4
+
+[sub_resource type="Resource" id="Resource_mxrkw"]
+script = ExtResource("3_xax37")
+target_event = ExtResource("4_odxqp")
+probability = 0.9
+
+[sub_resource type="Resource" id="Resource_wuusf"]
+script = ExtResource("3_xax37")
+target_event = ExtResource("5_xax37")
+probability = 0.1
+
+[sub_resource type="Resource" id="Resource_sb2su"]
+script = ExtResource("1_b4av6")
+outcomes = Array[ExtResource("3_xax37")]([SubResource("Resource_mxrkw"), SubResource("Resource_wuusf")])
+conditions = Array[ExtResource("2_odxqp")]([SubResource("Resource_ulurx")])
+
+[sub_resource type="Resource" id="Resource_i4d3r"]
+script = ExtResource("2_odxqp")
+type = 1
+attribute = "火力"
+value = 2
+
+[sub_resource type="Resource" id="Resource_2rmya"]
+script = ExtResource("2_odxqp")
+type = 1
+attribute = "支援"
+value = 1
+
+[sub_resource type="Resource" id="Resource_a6fxw"]
+script = ExtResource("3_xax37")
+target_event = ExtResource("4_odxqp")
+probability = 0.6
+
+[sub_resource type="Resource" id="Resource_yyuw3"]
+script = ExtResource("3_xax37")
+target_event = ExtResource("5_xax37")
+probability = 0.4
+
+[sub_resource type="Resource" id="Resource_d658u"]
+script = ExtResource("1_b4av6")
+outcomes = Array[ExtResource("3_xax37")]([SubResource("Resource_a6fxw"), SubResource("Resource_yyuw3")])
+conditions = Array[ExtResource("2_odxqp")]([SubResource("Resource_i4d3r"), SubResource("Resource_2rmya")])
+
+[sub_resource type="Resource" id="Resource_lhddk"]
+script = ExtResource("3_xax37")
+target_event = ExtResource("5_xax37")
+
+[sub_resource type="Resource" id="Resource_oeblh"]
+script = ExtResource("1_b4av6")
+outcomes = Array[ExtResource("3_xax37")]([SubResource("Resource_lhddk")])
+
+[sub_resource type="Resource" id="Resource_ddsc0"]
+script = ExtResource("8_nnq3o")
+required_tags = Array[String](["南部", "军事单位"])
+interactive_during_work = true
+
+[sub_resource type="Resource" id="Resource_dojxt"]
+script = ExtResource("8_nnq3o")
+required_tags = Array[String](["南部", "军事单位"])
+interactive_during_work = true
+
+[resource]
+script = ExtResource("7_a1m0a")
+id = "步兵冲击判定2"
+title = "南侧防线战斗中"
+description = "派遣前线部队参加战斗"
+slots = Array[ExtResource("8_nnq3o")]([SubResource("Resource_ddsc0"), SubResource("Resource_dojxt")])
+auto_start = true
+branches = Array[ExtResource("1_b4av6")]([SubResource("Resource_av8ws"), SubResource("Resource_f8a4b"), SubResource("Resource_sb2su"), SubResource("Resource_d658u"), SubResource("Resource_oeblh")])

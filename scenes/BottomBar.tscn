@@ -1,0 +1,101 @@
+[gd_scene load_steps=7 format=3 uid="uid://c7rxdv4f6u4nq"]
+
+[ext_resource type="Script" uid="uid://dyuq3blyugig1" path="res://scripts/BottomBar.gd" id="1_bar"]
+[ext_resource type="Texture2D" uid="uid://dpjyx13us2t2j" path="res://pic/base/dow.jpg" id="2_boq6v"]
+[ext_resource type="Script" uid="uid://cb0np3mg35ctf" path="res://scripts/UIButton.gd" id="2_uibtn"]
+[ext_resource type="Texture2D" uid="uid://bbcr0o80jbfgs" path="res://pic/base/d1.png" id="3_51edo"]
+[ext_resource type="Texture2D" uid="uid://dylyfedh7qjqd" path="res://pic/base/d2.png" id="5_eul1m"]
+[ext_resource type="Texture2D" uid="uid://cfpnkvqivx1w4" path="res://pic/base/d.png" id="6_kygd1"]
+
+[node name="BottomBar" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_bar")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.164706, 0.164706, 0.164706, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_right = 2341.463
+offset_bottom = 150.0
+rotation = 6.2831855
+scale = Vector2(0.82, 0.82)
+texture = ExtResource("2_boq6v")
+expand_mode = 1
+
+[node name="Content" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftSpacer" type="Control" parent="Content"]
+anchors_preset = 0
+offset_right = 1492.0
+offset_bottom = 100.0
+size_flags_horizontal = 3
+
+[node name="Buttons" type="HBoxContainer" parent="Content"]
+layout_mode = 0
+offset_left = 1500.0
+offset_top = 6.0
+offset_right = 1940.0
+offset_bottom = 134.0
+scale = Vector2(0.7, 0.7)
+theme_override_constants/separation = 25
+alignment = 2
+
+[node name="PauseButton" type="TextureButton" parent="Content/Buttons"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture_normal = ExtResource("3_51edo")
+texture_pressed = ExtResource("3_51edo")
+stretch_mode = 3
+script = ExtResource("2_uibtn")
+
+[node name="SpeedButton" type="TextureButton" parent="Content/Buttons"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture_normal = ExtResource("5_eul1m")
+texture_pressed = ExtResource("5_eul1m")
+stretch_mode = 3
+script = ExtResource("2_uibtn")
+
+[node name="SpeedBadge" type="Label" parent="Content/Buttons/SpeedButton"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -28.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = 25.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.29411766, 0.2784314, 0.27450982, 1)
+theme_override_font_sizes/font_size = 12
+text = "2x"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SettingsButton" type="TextureButton" parent="Content/Buttons"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture_normal = ExtResource("6_kygd1")
+texture_pressed = ExtResource("6_kygd1")
+stretch_mode = 3
+script = ExtResource("2_uibtn")

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=6 format=3 uid="uid://8sb4r2v5ded1"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_cfssm"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_3pdpp"]
+[ext_resource type="Resource" uid="uid://xqt3kaeqefoe" path="res://data/test/Events/test_graph/a2.tres" id="2_p5rc7"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_6fkx8"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_p5rc7"]
+
+[resource]
+script = ExtResource("3_6fkx8")
+id = "a1"
+title = "gugu"
+description = "撒反对告诉对方"
+duration = 20.0
+auto_start = true
+default_next_event = ExtResource("2_p5rc7")

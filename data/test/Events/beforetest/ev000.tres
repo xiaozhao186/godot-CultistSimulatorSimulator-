@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=7 format=3 uid="uid://d2d487trqcmjk"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_jbkx6"]
+[ext_resource type="Texture2D" uid="uid://dj1px7bo608sv" path="res://icon.svg" id="7_8e7c7"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="8_x0oc5"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="9_ogt6g"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="10_813ph"]
+
+[sub_resource type="Resource" id="Resource_gr8ap"]
+script = ExtResource("10_813ph")
+metadata/_custom_type_script = "uid://bib4cm0qyyk0k"
+
+[resource]
+script = ExtResource("9_ogt6g")
+id = "ev000"
+title = "事件000"
+description = "这是事件000"
+image = ExtResource("7_8e7c7")
+slots = Array[ExtResource("10_813ph")]([SubResource("Resource_gr8ap")])
+duration = 1.0
+metadata/_custom_type_script = "uid://d22geur8maor1"

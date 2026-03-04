@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=7 format=3 uid="uid://dkvemtxtgpwc1"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_xhr1t"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_ktjv3"]
+[ext_resource type="Script" uid="uid://c5kq15ymk63y6" path="res://scripts/CardTransformation.gd" id="3_ktjv3"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_lo8wu"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_51qet"]
+
+[sub_resource type="Resource" id="Resource_lo8wu"]
+script = ExtResource("2_ktjv3")
+verb_ids_to_spawn = Array[String](["zy10", "zy02"])
+delete_source_verb = true
+
+[resource]
+script = ExtResource("3_lo8wu")
+id = "增援1"
+title = "增援11"
+duration = 1.0
+auto_start = true
+auto_collect = true
+rewards = Array[ExtResource("2_ktjv3")]([SubResource("Resource_lo8wu")])

@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=8 format=3 uid="uid://dfnpgm8kvyx3a"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_q603m"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_k3qwu"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_4cffx"]
+[ext_resource type="Script" uid="uid://c5kq15ymk63y6" path="res://scripts/CardTransformation.gd" id="3_k3qwu"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_e8yeu"]
+
+[sub_resource type="Resource" id="Resource_4cffx"]
+script = ExtResource("2_k3qwu")
+delete_source_verb = true
+
+[sub_resource type="Resource" id="Resource_q603m"]
+script = ExtResource("4_e8yeu")
+required_tags = Array[String](["前线"])
+force_inhale = true
+action_type = "consume"
+
+[resource]
+script = ExtResource("3_4cffx")
+id = "伤亡事件"
+title = "伤亡惨重"
+description = "前线的一支部队经过连续的战斗已经遭受了重大损失，其剩余人员已就地编入其他战斗序列。"
+slots = Array[ExtResource("4_e8yeu")]([SubResource("Resource_q603m")])
+duration = 5.0
+auto_start = true
+rewards = Array[ExtResource("2_k3qwu")]([SubResource("Resource_4cffx")])

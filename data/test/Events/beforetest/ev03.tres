@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=7 format=3 uid="uid://dsy7pdgq6e5lj"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_8myax"]
+[ext_resource type="Texture2D" uid="uid://dj1px7bo608sv" path="res://icon.svg" id="2_su6y3"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="3_8srcq"]
+[ext_resource type="Resource" uid="uid://cwadif3ndosak" path="res://data/test/Events/beforetest/evr02.tres" id="4_830wx"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="5_wxc7t"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="6_rsfd6"]
+
+[resource]
+script = ExtResource("5_wxc7t")
+id = "ev03"
+title = "投机"
+description = "这是投机"
+image = ExtResource("2_su6y3")
+duration = 0.0
+rewards = Array[ExtResource("3_8srcq")]([ExtResource("4_830wx")])
+metadata/_custom_type_script = "uid://d22geur8maor1"

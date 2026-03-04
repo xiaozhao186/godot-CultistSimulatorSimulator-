@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://dbxwq36hl0cah"]
+
+[ext_resource type="Texture2D" uid="uid://dj1px7bo608sv" path="res://icon.svg" id="1_q0r51"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="2_8fdci"]
+
+[resource]
+script = ExtResource("2_8fdci")
+id = "cr05"
+name = "一个地址"
+description = "一个地址，指向组织据点"
+icon = ExtResource("1_q0r51")
+tags = Array[String](["地址"])
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

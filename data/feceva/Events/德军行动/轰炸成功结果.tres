@@ -1,0 +1,86 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=18 format=3 uid="uid://jcqyrh0wsgjn"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_0nr1s"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_qdsus"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_k2fro"]
+[ext_resource type="Script" uid="uid://c5kq15ymk63y6" path="res://scripts/CardTransformation.gd" id="3_qdsus"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_q6uco"]
+
+[sub_resource type="Resource" id="Resource_d8ac7"]
+script = ExtResource("3_qdsus")
+required_card_id = "fo03"
+resulting_card_id = "fo02"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_ugn8v"]
+script = ExtResource("3_qdsus")
+required_card_id = "fo02"
+resulting_card_id = "fo01"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_e52ss"]
+script = ExtResource("3_qdsus")
+required_card_id = "fo01"
+resulting_card_id = "fo00"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_5db32"]
+script = ExtResource("3_qdsus")
+required_card_id = "fo13"
+resulting_card_id = "fo12"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_my6ne"]
+script = ExtResource("3_qdsus")
+required_card_id = "fo12"
+resulting_card_id = "fo11"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_sde70"]
+script = ExtResource("3_qdsus")
+required_card_id = "fo11"
+resulting_card_id = "fo10"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_3a3eu"]
+script = ExtResource("3_qdsus")
+required_card_id = "fo23"
+resulting_card_id = "fo22"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_5blto"]
+script = ExtResource("3_qdsus")
+required_card_id = "fo22"
+resulting_card_id = "fo21"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_igpyd"]
+script = ExtResource("3_qdsus")
+required_card_id = "fo21"
+resulting_card_id = "fo20"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_qdsus"]
+script = ExtResource("3_qdsus")
+required_card_id = "wk04"
+resulting_card_id = "wk05"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_q6uco"]
+script = ExtResource("3_qdsus")
+required_card_id = "wk08"
+resulting_card_id = "wk06"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_k2fro"]
+script = ExtResource("2_qdsus")
+transformations = Array[ExtResource("3_qdsus")]([SubResource("Resource_d8ac7"), SubResource("Resource_ugn8v"), SubResource("Resource_e52ss"), SubResource("Resource_5db32"), SubResource("Resource_my6ne"), SubResource("Resource_sde70"), SubResource("Resource_3a3eu"), SubResource("Resource_5blto"), SubResource("Resource_igpyd"), SubResource("Resource_qdsus"), SubResource("Resource_q6uco")])
+
+[resource]
+script = ExtResource("3_k2fro")
+id = "轰炸成功结果"
+title = "敌机轰炸"
+description = "轰炸给我们造成了不小的损失"
+duration = 1.0
+auto_start = true
+rewards = Array[ExtResource("2_qdsus")]([SubResource("Resource_k2fro")])

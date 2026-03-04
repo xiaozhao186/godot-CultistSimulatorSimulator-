@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://bpqwrr0rujmm1"]
+
+[ext_resource type="Texture2D" uid="uid://d1vj6g62265wl" path="res://pic/03.jpeg" id="1_b5ysh"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="2_ckjou"]
+
+[resource]
+script = ExtResource("2_ckjou")
+id = "cr08"
+name = "人物1"
+description = "这是人物1"
+icon = ExtResource("1_b5ysh")
+tags = Array[String](["干部"])
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EventGraphData" load_steps=2 format=3 uid="uid://c833o3jumxavy"]
+
+[ext_resource type="Script" uid="uid://cqb5k7gwr66qc" path="res://addons/event_chain_editor/resources/event_graph_data.gd" id="1_2ms78"]
+
+[resource]
+script = ExtResource("1_2ms78")
+nodes = {
+"res://data/Events/test_graph/a1.tres": Vector2(-1120, 200),
+"res://data/Events/test_graph/a2.tres": Vector2(-440, -20)
+}
+metadata/_custom_type_script = "uid://cqb5k7gwr66qc"

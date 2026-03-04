@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=14 format=3 uid="uid://cluynunept3u"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_k0h3o"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_liwox"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_ovbrh"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_718f5"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_liwox"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_718f5"]
+[ext_resource type="Resource" uid="uid://65x7au6s8k4m" path="res://data/feceva/Events/结局判断/无事发生.tres" id="4_kqcts"]
+[ext_resource type="Resource" uid="uid://cve5704hj1df8" path="res://data/feceva/Events/结局判断/车站事故.tres" id="5_kqcts"]
+[ext_resource type="Resource" uid="uid://dfnpgm8kvyx3a" path="res://data/feceva/Events/结局判断/伤亡事件.tres" id="6_t320f"]
+
+[sub_resource type="Resource" id="Resource_liwox"]
+script = ExtResource("3_718f5")
+target_event = ExtResource("4_kqcts")
+probability = 0.7
+
+[sub_resource type="Resource" id="Resource_718f5"]
+script = ExtResource("3_718f5")
+target_event = ExtResource("5_kqcts")
+probability = 0.2
+
+[sub_resource type="Resource" id="Resource_t320f"]
+script = ExtResource("3_718f5")
+target_event = ExtResource("6_t320f")
+probability = 0.1
+
+[sub_resource type="Resource" id="Resource_kqcts"]
+script = ExtResource("1_k0h3o")
+outcomes = Array[ExtResource("3_718f5")]([SubResource("Resource_liwox"), SubResource("Resource_718f5"), SubResource("Resource_t320f")])
+
+[resource]
+script = ExtResource("3_liwox")
+id = "突发事件初始"
+title = "突发事件"
+description = "有些事总会发生，至于是好是坏，那都是各有可能性的。"
+auto_start = true
+branches = Array[ExtResource("1_k0h3o")]([SubResource("Resource_kqcts")])

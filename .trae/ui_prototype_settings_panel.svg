@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect x="0" y="0" width="1200" height="800" fill="#000000"/>
+  <rect x="0" y="0" width="1200" height="800" fill="#1e1e1e" opacity="0.10"/>
+
+  <rect x="240" y="120" width="720" height="560" rx="16" fill="#1e1e1e" stroke="#444444" stroke-width="2"/>
+
+  <text x="280" y="170" fill="#ffffff" font-size="22" font-family="Arial">Settings</text>
+  <rect x="900" y="146" width="28" height="28" rx="6" fill="#2a2a2a"/>
+  <text x="914" y="167" text-anchor="middle" fill="#ffffff" font-size="20" font-family="Arial">×</text>
+
+  <g transform="translate(280 210)">
+    <rect x="0" y="0" width="640" height="56" rx="10" fill="#262626"/>
+    <text x="16" y="35" fill="#dddddd" font-size="18" font-family="Arial">Resolution</text>
+    <rect x="400" y="10" width="224" height="36" rx="8" fill="#2f2f2f"/>
+    <text x="512" y="34" text-anchor="middle" fill="#ffffff" font-size="14" font-family="Arial">1920×1080 ▾</text>
+  </g>
+
+  <g fill="#262626">
+    <rect x="280" y="278" width="640" height="56" rx="10"/>
+    <rect x="280" y="346" width="640" height="56" rx="10"/>
+    <rect x="280" y="414" width="640" height="56" rx="10"/>
+    <rect x="280" y="482" width="640" height="56" rx="10"/>
+    <rect x="280" y="550" width="640" height="56" rx="10"/>
+  </g>
+  <text x="280" y="700" fill="#bbbbbb" font-size="14" font-family="Arial">5 placeholder rows reserved for future settings.</text>
+</svg>

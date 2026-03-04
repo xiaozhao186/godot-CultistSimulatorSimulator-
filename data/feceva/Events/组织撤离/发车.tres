@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=14 format=3 uid="uid://lq2h8vqup103"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_oevf8"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_qa8cn"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_f1eed"]
+[ext_resource type="Resource" uid="uid://cvqskjto7ad1m" path="res://data/feceva/Events/组织撤离/发车1.tres" id="4_ylc4i"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="7_aa8xf"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="8_2aydg"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="9_ro364"]
+
+[sub_resource type="Resource" id="Resource_ylc4i"]
+script = ExtResource("2_qa8cn")
+tag = "物资"
+
+[sub_resource type="Resource" id="Resource_yxf1a"]
+script = ExtResource("2_qa8cn")
+tag = "火车站"
+
+[sub_resource type="Resource" id="Resource_oevf8"]
+script = ExtResource("3_f1eed")
+target_event = ExtResource("4_ylc4i")
+
+[sub_resource type="Resource" id="Resource_622e3"]
+script = ExtResource("1_oevf8")
+outcomes = Array[ExtResource("3_f1eed")]([SubResource("Resource_oevf8")])
+conditions = Array[ExtResource("2_qa8cn")]([SubResource("Resource_ylc4i"), SubResource("Resource_yxf1a")])
+
+[sub_resource type="Resource" id="Resource_hj3gu"]
+script = ExtResource("9_ro364")
+required_tags = Array[String](["火车站"])
+forbidden_tags = Array[String](["混乱"])
+
+[sub_resource type="Resource" id="Resource_7pkjx"]
+script = ExtResource("9_ro364")
+required_tags = Array[String](["物资"])
+action_type = "consume"
+
+[resource]
+script = ExtResource("8_2aydg")
+id = "发车"
+title = "发车"
+description = "将工厂设备发车"
+slots = Array[ExtResource("9_ro364")]([SubResource("Resource_hj3gu"), SubResource("Resource_7pkjx")])
+duration = 1.0
+instant_branches = Array[ExtResource("1_oevf8")]([SubResource("Resource_622e3")])

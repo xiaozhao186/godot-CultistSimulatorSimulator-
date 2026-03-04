@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=13 format=3 uid="uid://iq6avtllxo8s"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_20yqk"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_h2rsu"]
+[ext_resource type="Resource" uid="uid://bdy1acs0b2ls6" path="res://data/test/Events/beforetest/evb02.tres" id="3_20yqk"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_h2rsu"]
+[ext_resource type="Texture2D" uid="uid://dj1px7bo608sv" path="res://icon.svg" id="4_kbsph"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="5_b5ppd"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="6_l5fod"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="7_i1ymv"]
+
+[sub_resource type="Resource" id="Resource_oeesc"]
+script = ExtResource("2_h2rsu")
+tag = "地址"
+metadata/_custom_type_script = "uid://dddlkxe4be6uv"
+
+[sub_resource type="Resource" id="Resource_h2rsu"]
+script = ExtResource("3_h2rsu")
+target_event = ExtResource("3_20yqk")
+metadata/_custom_type_script = "uid://dhlurc1qow4gw"
+
+[sub_resource type="Resource" id="Resource_0yy50"]
+script = ExtResource("1_20yqk")
+outcomes = Array[ExtResource("3_h2rsu")]([SubResource("Resource_h2rsu")])
+conditions = Array[ExtResource("2_h2rsu")]([SubResource("Resource_oeesc")])
+metadata/_custom_type_script = "uid://bj02frdeiskfx"
+
+[sub_resource type="Resource" id="Resource_377pm"]
+script = ExtResource("7_i1ymv")
+action_type = "consume"
+metadata/_custom_type_script = "uid://bib4cm0qyyk0k"
+
+[resource]
+script = ExtResource("6_l5fod")
+id = "evb01"
+title = "初来乍到"
+description = "一串密文写成的地址指向了深巷中的一户住宅，这是城中依旧安全的据点，"
+image = ExtResource("4_kbsph")
+slots = Array[ExtResource("7_i1ymv")]([SubResource("Resource_377pm")])
+duration = 5.0
+branches = Array[ExtResource("1_20yqk")]([SubResource("Resource_0yy50")])
+metadata/_custom_type_script = "uid://d22geur8maor1"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://dndatdnna3b3g"]
+
+[ext_resource type="Texture2D" uid="uid://dy6qe5b2os0gp" path="res://pic/fecevap/p4.jpg" id="1_ov5q1"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="2_laatn"]
+
+[resource]
+script = ExtResource("2_laatn")
+id = "am03"
+name = "反坦克班组"
+description = "配备反坦克炮"
+icon = ExtResource("1_ov5q1")
+tags = Array[String](["军事单位", "预备"])
+attributes = {
+&"反坦克": 3,
+&"支援": 1,
+&"火力": 1
+}
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

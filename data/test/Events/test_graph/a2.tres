@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=5 format=3 uid="uid://xqt3kaeqefoe"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_xfui8"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_vmo0a"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_6nako"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_vc5ea"]
+
+[resource]
+script = ExtResource("3_6nako")
+id = "a2"
+title = "gaga"
+description = "与可以让俯瞰图"
+duration = 12.0
+auto_collect = true

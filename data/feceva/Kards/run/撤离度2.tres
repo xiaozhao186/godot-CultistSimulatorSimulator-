@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://byje4hiobtak8"]
+
+[ext_resource type="Texture2D" uid="uid://bcdhmv0818uv4" path="res://pic/fecevap/p13.jpg" id="1_ilf6d"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="2_uof5n"]
+
+[resource]
+script = ExtResource("2_uof5n")
+id = "cp02"
+name = "撤离度-2"
+description = "工厂撤离的完成度（0-4）"
+icon = ExtResource("1_ilf6d")
+tags = Array[String](["胜利点"])
+attributes = Dictionary[StringName, int]({
+&"撤离度": 2
+})
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

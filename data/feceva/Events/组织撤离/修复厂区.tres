@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=14 format=3 uid="uid://c7bs6s5nlwic7"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_vf0el"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_bn12g"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_txyl1"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_bn12g"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_ifwtt"]
+[ext_resource type="Resource" uid="uid://db0rq0okqadm" path="res://data/feceva/Events/组织撤离/修复完成.tres" id="4_2kmv2"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_ifwtt"]
+
+[sub_resource type="Resource" id="Resource_5bs07"]
+script = ExtResource("2_bn12g")
+tag = "厂区"
+
+[sub_resource type="Resource" id="Resource_iwdm0"]
+script = ExtResource("2_bn12g")
+tag = "工厂民兵"
+
+[sub_resource type="Resource" id="Resource_ifwtt"]
+script = ExtResource("3_ifwtt")
+target_event = ExtResource("4_2kmv2")
+
+[sub_resource type="Resource" id="Resource_2kmv2"]
+script = ExtResource("1_vf0el")
+outcomes = Array[ExtResource("3_ifwtt")]([SubResource("Resource_ifwtt")])
+conditions = Array[ExtResource("2_bn12g")]([SubResource("Resource_5bs07"), SubResource("Resource_iwdm0")])
+
+[sub_resource type="Resource" id="Resource_vf0el"]
+script = ExtResource("4_ifwtt")
+required_tags = Array[String](["混乱"])
+action_type = "reward"
+
+[sub_resource type="Resource" id="Resource_bn12g"]
+script = ExtResource("4_ifwtt")
+
+[resource]
+script = ExtResource("3_bn12g")
+id = "修复厂区"
+title = "恢复撤离"
+description = "德军的袭击结束了，现在得处理那些废墟了，派出民兵恢复秩序，继续转移设备"
+slots = Array[ExtResource("4_ifwtt")]([SubResource("Resource_vf0el"), SubResource("Resource_bn12g")])
+branches = Array[ExtResource("1_vf0el")]([SubResource("Resource_2kmv2")])

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=7 format=3 uid="uid://788fsgab1vjp"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_rhtng"]
+[ext_resource type="Texture2D" uid="uid://dj1px7bo608sv" path="res://icon.svg" id="2_5k5fh"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="3_o53qe"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="4_nrmta"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="5_1247a"]
+
+[sub_resource type="Resource" id="Resource_rj4i3"]
+script = ExtResource("3_o53qe")
+card_ids = Array[String](["cr08", "cr09"])
+metadata/_custom_type_script = "uid://cljq581cxshph"
+
+[resource]
+script = ExtResource("4_nrmta")
+id = "evb04"
+title = "欢迎"
+description = "你闪身进入。。。"
+image = ExtResource("2_5k5fh")
+duration = 1.0
+rewards = Array[ExtResource("3_o53qe")]([SubResource("Resource_rj4i3")])
+metadata/_custom_type_script = "uid://d22geur8maor1"

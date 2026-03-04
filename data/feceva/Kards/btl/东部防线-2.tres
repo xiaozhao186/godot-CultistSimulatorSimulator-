@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://b5h5573h7wgug"]
+
+[ext_resource type="Texture2D" uid="uid://4w4fwsxh8ibt" path="res://pic/fecevap/p11.jpg" id="1_ovo8q"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="2_bb3tf"]
+
+[resource]
+script = ExtResource("2_bb3tf")
+id = "fo12"
+name = "东部防线-2"
+description = "东部防线"
+icon = ExtResource("1_ovo8q")
+tags = Array[String](["防线", "东部", "轰炸目标"])
+attributes = {
+"稳固度": 2
+}
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

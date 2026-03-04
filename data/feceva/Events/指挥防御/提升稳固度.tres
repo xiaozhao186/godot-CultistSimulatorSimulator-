@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=14 format=3 uid="uid://c7suf8b7gc3va"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_q6bsk"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_fwpfk"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_o6ha3"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_mr1kx"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_o6ha3"]
+[ext_resource type="Resource" uid="uid://d1fexuyctx4y5" path="res://data/feceva/Events/指挥防御/稳固度已提升.tres" id="4_5xwbb"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_mr1kx"]
+
+[sub_resource type="Resource" id="Resource_o6ha3"]
+script = ExtResource("2_o6ha3")
+tag = "防线"
+
+[sub_resource type="Resource" id="Resource_mr1kx"]
+script = ExtResource("2_o6ha3")
+tag = "工厂工人"
+
+[sub_resource type="Resource" id="Resource_sap8l"]
+script = ExtResource("3_mr1kx")
+target_event = ExtResource("4_5xwbb")
+
+[sub_resource type="Resource" id="Resource_5xwbb"]
+script = ExtResource("1_q6bsk")
+outcomes = Array[ExtResource("3_mr1kx")]([SubResource("Resource_sap8l")])
+conditions = Array[ExtResource("2_o6ha3")]([SubResource("Resource_o6ha3"), SubResource("Resource_mr1kx")])
+
+[sub_resource type="Resource" id="Resource_q6bsk"]
+script = ExtResource("4_mr1kx")
+forbidden_attributes = Dictionary[StringName, int]({
+&"稳固度": 3
+})
+required_tags = Array[String](["防线"])
+action_type = "reward"
+
+[sub_resource type="Resource" id="Resource_fwpfk"]
+script = ExtResource("4_mr1kx")
+required_tags = Array[String](["工厂工人"])
+
+[resource]
+script = ExtResource("3_o6ha3")
+id = "提升稳固度"
+title = "提升防线稳固度"
+description = "通过派遣工人加固防线"
+slots = Array[ExtResource("4_mr1kx")]([SubResource("Resource_q6bsk"), SubResource("Resource_fwpfk")])
+branches = Array[ExtResource("1_q6bsk")]([SubResource("Resource_5xwbb")])

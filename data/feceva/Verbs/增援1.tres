@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="VerbData" load_steps=4 format=3 uid="uid://payv8ec36jsb"]
+
+[ext_resource type="Resource" uid="uid://bf2q0gm6k6l3s" path="res://data/feceva/Events/结局判断/阶段增援.tres" id="1_wilyo"]
+[ext_resource type="Texture2D" uid="uid://d0ytkkmn1jbcf" path="res://pic/fecevap/pv4.jpg" id="2_wilyo"]
+[ext_resource type="Script" uid="uid://i1lcnlm6wld" path="res://scripts/VerbData.gd" id="3_rk3fi"]
+
+[resource]
+script = ExtResource("3_rk3fi")
+id = "zy01"
+title = "增援事件组1"
+icon = ExtResource("2_wilyo")
+default_event = ExtResource("1_wilyo")
+hidden_runtime = true
+metadata/_custom_type_script = "uid://i1lcnlm6wld"

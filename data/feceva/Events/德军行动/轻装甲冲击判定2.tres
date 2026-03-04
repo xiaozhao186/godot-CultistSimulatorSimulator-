@@ -1,0 +1,174 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=38 format=3 uid="uid://hyhx82e3piha"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_g1xhy"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_ejus4"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_wyteh"]
+[ext_resource type="Resource" uid="uid://cchkp7qcxqqo4" path="res://data/feceva/Events/德军行动/吸入南l.tres" id="4_ybll3"]
+[ext_resource type="Resource" uid="uid://wix5rcndgytm" path="res://data/feceva/Events/德军行动/吸入南w.tres" id="5_g1xhy"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="6_hwfdf"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="7_kfmu3"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="8_r2vbq"]
+
+[sub_resource type="Resource" id="Resource_qnlpo"]
+script = ExtResource("2_ejus4")
+type = 1
+attribute = "火力"
+value = 3
+
+[sub_resource type="Resource" id="Resource_chhhl"]
+script = ExtResource("2_ejus4")
+type = 1
+attribute = "支援"
+value = 1
+
+[sub_resource type="Resource" id="Resource_61odx"]
+script = ExtResource("3_wyteh")
+target_event = ExtResource("5_g1xhy")
+probability = 0.6
+
+[sub_resource type="Resource" id="Resource_du6g1"]
+script = ExtResource("3_wyteh")
+target_event = ExtResource("4_ybll3")
+probability = 0.4
+
+[sub_resource type="Resource" id="Resource_f8a4b"]
+script = ExtResource("1_g1xhy")
+outcomes = Array[ExtResource("3_wyteh")]([SubResource("Resource_61odx"), SubResource("Resource_du6g1")])
+conditions = Array[ExtResource("2_ejus4")]([SubResource("Resource_qnlpo"), SubResource("Resource_chhhl")])
+
+[sub_resource type="Resource" id="Resource_ulurx"]
+script = ExtResource("2_ejus4")
+type = 1
+attribute = "火力"
+value = 4
+
+[sub_resource type="Resource" id="Resource_pt48t"]
+script = ExtResource("2_ejus4")
+type = 1
+tag = "支援"
+attribute = "支援"
+value = 2
+
+[sub_resource type="Resource" id="Resource_mxrkw"]
+script = ExtResource("3_wyteh")
+target_event = ExtResource("5_g1xhy")
+probability = 0.9
+
+[sub_resource type="Resource" id="Resource_wuusf"]
+script = ExtResource("3_wyteh")
+target_event = ExtResource("4_ybll3")
+probability = 0.1
+
+[sub_resource type="Resource" id="Resource_sb2su"]
+script = ExtResource("1_g1xhy")
+outcomes = Array[ExtResource("3_wyteh")]([SubResource("Resource_mxrkw"), SubResource("Resource_wuusf")])
+conditions = Array[ExtResource("2_ejus4")]([SubResource("Resource_ulurx"), SubResource("Resource_pt48t")])
+
+[sub_resource type="Resource" id="Resource_i4d3r"]
+script = ExtResource("2_ejus4")
+type = 1
+attribute = "火力"
+value = 6
+
+[sub_resource type="Resource" id="Resource_a6fxw"]
+script = ExtResource("3_wyteh")
+target_event = ExtResource("5_g1xhy")
+probability = 0.6
+
+[sub_resource type="Resource" id="Resource_yyuw3"]
+script = ExtResource("3_wyteh")
+target_event = ExtResource("4_ybll3")
+probability = 0.4
+
+[sub_resource type="Resource" id="Resource_d658u"]
+script = ExtResource("1_g1xhy")
+outcomes = Array[ExtResource("3_wyteh")]([SubResource("Resource_a6fxw"), SubResource("Resource_yyuw3")])
+conditions = Array[ExtResource("2_ejus4")]([SubResource("Resource_i4d3r")])
+
+[sub_resource type="Resource" id="Resource_omwsn"]
+script = ExtResource("2_ejus4")
+type = 1
+attribute = "火力"
+value = 2
+
+[sub_resource type="Resource" id="Resource_bt7u7"]
+script = ExtResource("2_ejus4")
+type = 1
+attribute = "反坦克"
+value = 1
+
+[sub_resource type="Resource" id="Resource_lhddk"]
+script = ExtResource("3_wyteh")
+target_event = ExtResource("5_g1xhy")
+probability = 0.6
+
+[sub_resource type="Resource" id="Resource_qn0wa"]
+script = ExtResource("3_wyteh")
+target_event = ExtResource("4_ybll3")
+probability = 0.4
+
+[sub_resource type="Resource" id="Resource_oeblh"]
+script = ExtResource("1_g1xhy")
+outcomes = Array[ExtResource("3_wyteh")]([SubResource("Resource_lhddk"), SubResource("Resource_qn0wa")])
+conditions = Array[ExtResource("2_ejus4")]([SubResource("Resource_omwsn"), SubResource("Resource_bt7u7")])
+
+[sub_resource type="Resource" id="Resource_r47ih"]
+script = ExtResource("2_ejus4")
+type = 1
+tag = "火力"
+attribute = "火力"
+value = 4
+
+[sub_resource type="Resource" id="Resource_r3fu1"]
+script = ExtResource("2_ejus4")
+type = 1
+tag = "支援"
+attribute = "反坦克"
+value = 1
+
+[sub_resource type="Resource" id="Resource_g724n"]
+script = ExtResource("3_wyteh")
+target_event = ExtResource("5_g1xhy")
+probability = 0.9
+
+[sub_resource type="Resource" id="Resource_qv230"]
+script = ExtResource("3_wyteh")
+target_event = ExtResource("4_ybll3")
+probability = 0.1
+
+[sub_resource type="Resource" id="Resource_affco"]
+script = ExtResource("1_g1xhy")
+outcomes = Array[ExtResource("3_wyteh")]([SubResource("Resource_g724n"), SubResource("Resource_qv230")])
+conditions = Array[ExtResource("2_ejus4")]([SubResource("Resource_r47ih"), SubResource("Resource_r3fu1")])
+
+[sub_resource type="Resource" id="Resource_ejus4"]
+script = ExtResource("3_wyteh")
+target_event = ExtResource("4_ybll3")
+
+[sub_resource type="Resource" id="Resource_g1xhy"]
+script = ExtResource("1_g1xhy")
+outcomes = Array[ExtResource("3_wyteh")]([SubResource("Resource_ejus4")])
+
+[sub_resource type="Resource" id="Resource_ddsc0"]
+script = ExtResource("8_r2vbq")
+required_tags = Array[String](["南部", "军事单位"])
+interactive_during_work = true
+
+[sub_resource type="Resource" id="Resource_dojxt"]
+script = ExtResource("8_r2vbq")
+required_tags = Array[String](["南部", "军事单位"])
+interactive_during_work = true
+
+[sub_resource type="Resource" id="Resource_jt0fd"]
+script = ExtResource("8_r2vbq")
+required_tags = Array[String](["南部", "军事单位"])
+interactive_during_work = true
+
+[resource]
+script = ExtResource("7_kfmu3")
+id = "轻装甲冲击判定2"
+title = "南侧防线战斗中"
+description = "派遣前线部队参加战斗"
+slots = Array[ExtResource("8_r2vbq")]([SubResource("Resource_ddsc0"), SubResource("Resource_dojxt"), SubResource("Resource_jt0fd")])
+auto_start = true
+branches = Array[ExtResource("1_g1xhy")]([SubResource("Resource_f8a4b"), SubResource("Resource_sb2su"), SubResource("Resource_d658u"), SubResource("Resource_oeblh"), SubResource("Resource_affco"), SubResource("Resource_g1xhy")])

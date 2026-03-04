@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="VerbData" load_steps=4 format=3 uid="uid://crutuvr63quji"]
+
+[ext_resource type="Script" uid="uid://i1lcnlm6wld" path="res://scripts/VerbData.gd" id="1_c2bmq"]
+[ext_resource type="Resource" uid="uid://dy6uvo1itn10l" path="res://data/feceva/Events/指挥防御/防御初始.tres" id="1_ch60u"]
+[ext_resource type="Texture2D" uid="uid://b35udawqkfaqg" path="res://pic/fecevap/pv2.jpg" id="2_ch60u"]
+
+[resource]
+script = ExtResource("1_c2bmq")
+title = "指挥防御"
+icon = ExtResource("2_ch60u")
+default_event = ExtResource("1_ch60u")
+metadata/_custom_type_script = "uid://i1lcnlm6wld"

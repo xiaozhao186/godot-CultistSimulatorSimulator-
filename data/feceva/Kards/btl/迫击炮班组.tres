@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://cnbgqe1tnfsvy"]
+
+[ext_resource type="Texture2D" uid="uid://br4aka0vy3qfc" path="res://pic/fecevap/p5.jpg" id="1_46i1h"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="2_b18ou"]
+
+[resource]
+script = ExtResource("2_b18ou")
+id = "am04"
+name = "迫击炮班组"
+description = "配备迫击炮"
+icon = ExtResource("1_46i1h")
+tags = Array[String](["军事单位", "预备"])
+attributes = {
+&"支援": 2,
+&"火力": 1
+}
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

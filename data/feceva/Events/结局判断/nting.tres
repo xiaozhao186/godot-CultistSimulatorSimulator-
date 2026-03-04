@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=5 format=3 uid="uid://cq8qrkagcf4qc"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_volk1"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_wtpet"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_517d5"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_2gqmo"]
+
+[resource]
+script = ExtResource("3_517d5")
+id = "nting"
+duration = 1.0
+auto_start = true
+auto_collect = true

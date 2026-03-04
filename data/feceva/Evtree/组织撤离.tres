@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="EventGraphData" load_steps=2 format=3 uid="uid://dkc1yyv6jobq"]
+
+[ext_resource type="Script" uid="uid://cqb5k7gwr66qc" path="res://addons/event_chain_editor/resources/event_graph_data.gd" id="1_s075q"]
+
+[resource]
+script = ExtResource("1_s075q")
+nodes = {
+"res://data/feceva/Events/组织撤离/修复.tres": Vector2(-2740, 1740),
+"res://data/feceva/Events/组织撤离/修复厂区.tres": Vector2(-1920, 2940),
+"res://data/feceva/Events/组织撤离/修复完成.tres": Vector2(-1260, 2560),
+"res://data/feceva/Events/组织撤离/修复车站.tres": Vector2(-1920, 1900),
+"res://data/feceva/Events/组织撤离/发车.tres": Vector2(-4160, 260),
+"res://data/feceva/Events/组织撤离/发车1.tres": Vector2(-3660, 260),
+"res://data/feceva/Events/组织撤离/发车完成.tres": Vector2(-2360, 500),
+"res://data/feceva/Events/组织撤离/已发车.tres": Vector2(-2880, 380),
+"res://data/feceva/Events/组织撤离/已装车.tres": Vector2(-3460, -1820),
+"res://data/feceva/Events/组织撤离/已装车1.tres": Vector2(-3460, -1120),
+"res://data/feceva/Events/组织撤离/已装车2.tres": Vector2(-3460, -420),
+"res://data/feceva/Events/组织撤离/接受增援.tres": Vector2(-4720, 1980),
+"res://data/feceva/Events/组织撤离/接受增援1.tres": Vector2(-3920, 1920),
+"res://data/feceva/Events/组织撤离/接受增援2.tres": Vector2(-3920, 2900),
+"res://data/feceva/Events/组织撤离/接受增援3.tres": Vector2(-3920, 3900),
+"res://data/feceva/Events/组织撤离/接受增援完成1.tres": Vector2(-3340, 2140),
+"res://data/feceva/Events/组织撤离/接受增援完成2.tres": Vector2(-3360, 2900),
+"res://data/feceva/Events/组织撤离/接受增援完成3.tres": Vector2(-3320, 3820),
+"res://data/feceva/Events/组织撤离/搬运装车.tres": Vector2(-4160, -1600),
+"res://data/feceva/Events/组织撤离/撤离初始.tres": Vector2(-5360, 320)
+}
+metadata/_custom_type_script = "uid://cqb5k7gwr66qc"

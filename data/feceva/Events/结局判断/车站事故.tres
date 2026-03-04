@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=15 format=3 uid="uid://cve5704hj1df8"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_n05ds"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_772i1"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_krn7y"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_772i1"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_bkfq0"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_bkfq0"]
+[ext_resource type="Resource" uid="uid://bm6rm5qksm7j5" path="res://data/feceva/Events/结局判断/车站事故1.tres" id="4_mr70f"]
+[ext_resource type="Resource" uid="uid://cfbx67jio72s8" path="res://data/feceva/Events/结局判断/车站事故2.tres" id="5_mr70f"]
+
+[sub_resource type="Resource" id="Resource_ikc0s"]
+script = ExtResource("2_772i1")
+tag = "火车站"
+
+[sub_resource type="Resource" id="Resource_772i1"]
+script = ExtResource("3_bkfq0")
+target_event = ExtResource("4_mr70f")
+
+[sub_resource type="Resource" id="Resource_mr70f"]
+script = ExtResource("1_n05ds")
+outcomes = Array[ExtResource("3_bkfq0")]([SubResource("Resource_772i1")])
+conditions = Array[ExtResource("2_772i1")]([SubResource("Resource_ikc0s")])
+
+[sub_resource type="Resource" id="Resource_rljbp"]
+script = ExtResource("3_bkfq0")
+target_event = ExtResource("5_mr70f")
+
+[sub_resource type="Resource" id="Resource_bkfq0"]
+script = ExtResource("1_n05ds")
+outcomes = Array[ExtResource("3_bkfq0")]([SubResource("Resource_rljbp")])
+
+[sub_resource type="Resource" id="Resource_n05ds"]
+script = ExtResource("4_bkfq0")
+force_inhale = true
+specific_card_ids = Array[String](["wk04"])
+action_type = "reward"
+
+[resource]
+script = ExtResource("3_772i1")
+id = "车站事故"
+title = "火车站事故"
+description = "车站出事了，一台大型设备不慎从吊机上脱落，把平板车砸了个稀碎。"
+slots = Array[ExtResource("4_bkfq0")]([SubResource("Resource_n05ds")])
+duration = 5.0
+auto_start = true
+auto_collect = true
+branches = Array[ExtResource("1_n05ds")]([SubResource("Resource_mr70f"), SubResource("Resource_bkfq0")])

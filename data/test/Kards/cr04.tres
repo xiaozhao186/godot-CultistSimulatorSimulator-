@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://b3p6pexpfl4qa"]
+
+[ext_resource type="Texture2D" uid="uid://dj1px7bo608sv" path="res://icon.svg" id="1_ow3eo"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="1_yxotf"]
+
+[resource]
+script = ExtResource("1_yxotf")
+id = "cr04"
+name = "机会"
+description = "九九九哈哈哈"
+icon = ExtResource("1_ow3eo")
+tags = Array[String](["机会"])
+lifetime = 20.0
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

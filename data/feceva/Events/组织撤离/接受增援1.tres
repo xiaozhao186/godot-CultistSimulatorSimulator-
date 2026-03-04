@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=12 format=3 uid="uid://bts2bwu62r8ru"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_gxdgh"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_804yk"]
+[ext_resource type="Resource" uid="uid://cr8j2v26wsvjl" path="res://data/feceva/Events/组织撤离/接受增援完成1.tres" id="2_m7xrr"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_ulkkr"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_jhl62"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_m7xrr"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_ulkkr"]
+
+[sub_resource type="Resource" id="Resource_jhl62"]
+script = ExtResource("3_jhl62")
+target_event = ExtResource("2_m7xrr")
+
+[sub_resource type="Resource" id="Resource_m7xrr"]
+script = ExtResource("1_gxdgh")
+outcomes = Array[ExtResource("3_jhl62")]([SubResource("Resource_jhl62")])
+
+[sub_resource type="Resource" id="Resource_804yk"]
+script = ExtResource("4_ulkkr")
+action_type = "consume"
+
+[sub_resource type="Resource" id="Resource_ulkkr"]
+script = ExtResource("4_ulkkr")
+
+[resource]
+script = ExtResource("3_m7xrr")
+id = "接受增援1"
+title = "接受后方增援"
+description = "增援正在路上"
+slots = Array[ExtResource("4_ulkkr")]([SubResource("Resource_804yk"), SubResource("Resource_ulkkr")])
+branches = Array[ExtResource("1_gxdgh")]([SubResource("Resource_m7xrr")])

@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=13 format=3 uid="uid://duwicmdf3low6"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_2scac"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_swjxb"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_8ny6u"]
+[ext_resource type="Resource" uid="uid://788fsgab1vjp" path="res://data/test/Events/beforetest/evb04.tres" id="4_xod0s"]
+[ext_resource type="Texture2D" uid="uid://dj1px7bo608sv" path="res://icon.svg" id="5_pb0wg"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="6_826fg"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="7_rgi0a"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="8_gx5e4"]
+
+[sub_resource type="Resource" id="Resource_oeesc"]
+script = ExtResource("2_swjxb")
+tag = "证明"
+metadata/_custom_type_script = "uid://dddlkxe4be6uv"
+
+[sub_resource type="Resource" id="Resource_bdb0d"]
+script = ExtResource("3_8ny6u")
+target_event = ExtResource("4_xod0s")
+metadata/_custom_type_script = "uid://dhlurc1qow4gw"
+
+[sub_resource type="Resource" id="Resource_0yy50"]
+script = ExtResource("1_2scac")
+outcomes = Array[ExtResource("3_8ny6u")]([SubResource("Resource_bdb0d")])
+conditions = Array[ExtResource("2_swjxb")]([SubResource("Resource_oeesc")])
+metadata/_custom_type_script = "uid://bj02frdeiskfx"
+
+[sub_resource type="Resource" id="Resource_377pm"]
+script = ExtResource("8_gx5e4")
+interactive_during_work = true
+action_type = "consume"
+metadata/_custom_type_script = "uid://bib4cm0qyyk0k"
+
+[resource]
+script = ExtResource("7_rgi0a")
+id = "evb03"
+title = "证明？"
+description = "表明来意后，。。。问道"
+image = ExtResource("5_pb0wg")
+slots = Array[ExtResource("8_gx5e4")]([SubResource("Resource_377pm")])
+duration = 5.0
+auto_start = true
+branches = Array[ExtResource("1_2scac")]([SubResource("Resource_0yy50")])
+metadata/_custom_type_script = "uid://d22geur8maor1"

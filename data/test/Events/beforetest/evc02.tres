@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=8 format=3 uid="uid://dj828g2hxtflw"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_e3d3s"]
+[ext_resource type="Texture2D" uid="uid://dj1px7bo608sv" path="res://icon.svg" id="2_u11ay"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="3_icct6"]
+[ext_resource type="Script" uid="uid://c5kq15ymk63y6" path="res://scripts/CardTransformation.gd" id="4_kcfdg"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="4_ywdva"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="5_h88ux"]
+
+[sub_resource type="Resource" id="Resource_rj4i3"]
+script = ExtResource("3_icct6")
+verb_ids_to_spawn = Array[String](["verb1"])
+metadata/_custom_type_script = "uid://cljq581cxshph"
+
+[resource]
+script = ExtResource("4_ywdva")
+id = "evc02"
+title = "生成2"
+description = "生成测试02"
+image = ExtResource("2_u11ay")
+duration = 1.0
+auto_collect = true
+rewards = Array[ExtResource("3_icct6")]([SubResource("Resource_rj4i3")])
+metadata/_custom_type_script = "uid://d22geur8maor1"

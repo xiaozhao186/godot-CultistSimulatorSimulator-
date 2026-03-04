@@ -1,0 +1,101 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=27 format=3 uid="uid://cv2farhl7dhel"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_fqrax"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_0egt0"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_j4eb6"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_1ttoq"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_j4eb6"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_1ttoq"]
+[ext_resource type="Resource" uid="uid://bts2bwu62r8ru" path="res://data/feceva/Events/组织撤离/接受增援1.tres" id="4_32raa"]
+[ext_resource type="Resource" uid="uid://bp00l3t7idtgs" path="res://data/feceva/Events/组织撤离/接受增援2.tres" id="5_32raa"]
+[ext_resource type="Resource" uid="uid://cl8iqjbpw13kq" path="res://data/feceva/Events/组织撤离/接受增援3.tres" id="6_l615h"]
+
+[sub_resource type="Resource" id="Resource_32raa"]
+script = ExtResource("2_j4eb6")
+tag = "增援"
+
+[sub_resource type="Resource" id="Resource_l615h"]
+script = ExtResource("2_j4eb6")
+type = 1
+attribute = "波次"
+value = 1
+op = 4
+
+[sub_resource type="Resource" id="Resource_ceoav"]
+script = ExtResource("2_j4eb6")
+tag = "火车站"
+
+[sub_resource type="Resource" id="Resource_jsgnk"]
+script = ExtResource("3_1ttoq")
+target_event = ExtResource("4_32raa")
+
+[sub_resource type="Resource" id="Resource_j4eb6"]
+script = ExtResource("1_fqrax")
+outcomes = Array[ExtResource("3_1ttoq")]([SubResource("Resource_jsgnk")])
+conditions = Array[ExtResource("2_j4eb6")]([SubResource("Resource_32raa"), SubResource("Resource_l615h"), SubResource("Resource_ceoav")])
+
+[sub_resource type="Resource" id="Resource_rpyfa"]
+script = ExtResource("2_j4eb6")
+tag = "增援"
+
+[sub_resource type="Resource" id="Resource_br7wc"]
+script = ExtResource("2_j4eb6")
+type = 1
+attribute = "波次"
+value = 2
+op = 4
+
+[sub_resource type="Resource" id="Resource_fpjv3"]
+script = ExtResource("2_j4eb6")
+tag = "火车站"
+
+[sub_resource type="Resource" id="Resource_u68fk"]
+script = ExtResource("3_1ttoq")
+target_event = ExtResource("5_32raa")
+
+[sub_resource type="Resource" id="Resource_a85te"]
+script = ExtResource("1_fqrax")
+outcomes = Array[ExtResource("3_1ttoq")]([SubResource("Resource_u68fk")])
+conditions = Array[ExtResource("2_j4eb6")]([SubResource("Resource_rpyfa"), SubResource("Resource_br7wc"), SubResource("Resource_fpjv3")])
+
+[sub_resource type="Resource" id="Resource_8rxot"]
+script = ExtResource("2_j4eb6")
+tag = "增援"
+
+[sub_resource type="Resource" id="Resource_ernrw"]
+script = ExtResource("2_j4eb6")
+type = 1
+attribute = "波次"
+value = 3
+op = 4
+
+[sub_resource type="Resource" id="Resource_8xg7k"]
+script = ExtResource("2_j4eb6")
+tag = "火车站"
+
+[sub_resource type="Resource" id="Resource_5bgbm"]
+script = ExtResource("3_1ttoq")
+target_event = ExtResource("6_l615h")
+
+[sub_resource type="Resource" id="Resource_vsgf7"]
+script = ExtResource("1_fqrax")
+outcomes = Array[ExtResource("3_1ttoq")]([SubResource("Resource_5bgbm")])
+conditions = Array[ExtResource("2_j4eb6")]([SubResource("Resource_8rxot"), SubResource("Resource_ernrw"), SubResource("Resource_8xg7k")])
+
+[sub_resource type="Resource" id="Resource_fqrax"]
+script = ExtResource("4_1ttoq")
+required_tags = Array[String](["增援"])
+
+[sub_resource type="Resource" id="Resource_1ttoq"]
+script = ExtResource("4_1ttoq")
+required_tags = Array[String](["火车站"])
+forbidden_tags = Array[String](["混乱"])
+
+[resource]
+script = ExtResource("3_j4eb6")
+id = "接受增援"
+title = "接受后方增援"
+description = "德军攻势持续加强，前线需要新的有生力量，当然这会占用车站一些时间"
+slots = Array[ExtResource("4_1ttoq")]([SubResource("Resource_fqrax"), SubResource("Resource_1ttoq")])
+duration = 1.0
+instant_branches = Array[ExtResource("1_fqrax")]([SubResource("Resource_j4eb6"), SubResource("Resource_a85te"), SubResource("Resource_vsgf7")])

@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=12 format=3 uid="uid://cwp7fflacr642"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_8sxjg"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_3sjwl"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_n2lwy"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_n2lwy"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_pd4or"]
+[ext_resource type="Resource" uid="uid://bxmcar7en2hol" path="res://data/test/Events/01/e2.tres" id="4_0vqjs"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_pd4or"]
+
+[sub_resource type="Resource" id="Resource_pd4or"]
+script = ExtResource("2_n2lwy")
+type = 1
+attribute = "货币"
+value = 1
+
+[sub_resource type="Resource" id="Resource_0vqjs"]
+script = ExtResource("3_pd4or")
+target_event = ExtResource("4_0vqjs")
+
+[sub_resource type="Resource" id="Resource_n2lwy"]
+script = ExtResource("1_8sxjg")
+outcomes = Array[ExtResource("3_pd4or")]([SubResource("Resource_0vqjs")])
+conditions = Array[ExtResource("2_n2lwy")]([SubResource("Resource_pd4or")])
+
+[sub_resource type="Resource" id="Resource_3sjwl"]
+script = ExtResource("4_pd4or")
+
+[resource]
+script = ExtResource("3_n2lwy")
+id = "e1"
+title = "测测试是"
+description = "你的测测"
+slots = Array[ExtResource("4_pd4or")]([SubResource("Resource_3sjwl")])
+duration = 1.0
+branches = Array[ExtResource("1_8sxjg")]([SubResource("Resource_n2lwy")])

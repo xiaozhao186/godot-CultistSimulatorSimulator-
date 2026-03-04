@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=7 format=3 uid="uid://bfmuij8hlfyow"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_hyc71"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_mp2o7"]
+[ext_resource type="Script" uid="uid://c5kq15ymk63y6" path="res://scripts/CardTransformation.gd" id="3_mp2o7"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_v52ue"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_gwodt"]
+
+[sub_resource type="Resource" id="Resource_v52ue"]
+script = ExtResource("2_mp2o7")
+card_ids = Array[String](["pc01"])
+delete_source_verb = true
+
+[resource]
+script = ExtResource("3_v52ue")
+id = "增援一号"
+title = "一号增援令"
+description = "重大历史机遇"
+auto_start = true
+rewards = Array[ExtResource("2_mp2o7")]([SubResource("Resource_v52ue")])

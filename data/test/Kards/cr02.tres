@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://cm2j8j40bpl1q"]
+
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="1_rsg5n"]
+[ext_resource type="Texture2D" uid="uid://dj1px7bo608sv" path="res://icon.svg" id="1_yde71"]
+
+[resource]
+script = ExtResource("1_rsg5n")
+id = "cr02"
+name = "脑力"
+description = "这是脑力"
+icon = ExtResource("1_yde71")
+tags = Array[String](["脑力"])
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

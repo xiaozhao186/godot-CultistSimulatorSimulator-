@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://c768fxfrrkg5y"]
+
+[ext_resource type="Texture2D" uid="uid://dj1px7bo608sv" path="res://icon.svg" id="1_vlm28"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="2_p5v3k"]
+
+[resource]
+script = ExtResource("2_p5v3k")
+id = "cr09"
+name = "安全屋"
+description = "安全屋"
+icon = ExtResource("1_vlm28")
+tags = Array[String](["地点"])
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

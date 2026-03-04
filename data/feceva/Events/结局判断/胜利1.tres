@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=7 format=3 uid="uid://dppo3xsk42c6s"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_rmw8w"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_43nm3"]
+[ext_resource type="Script" uid="uid://c5kq15ymk63y6" path="res://scripts/CardTransformation.gd" id="3_43nm3"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_c3t87"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_ojlg6"]
+
+[sub_resource type="Resource" id="Resource_c3t87"]
+script = ExtResource("2_43nm3")
+ending_index = 0
+
+[resource]
+script = ExtResource("3_c3t87")
+id = "胜利1"
+title = "胜利1"
+duration = 1.0
+auto_start = true
+auto_collect = true
+rewards = Array[ExtResource("2_43nm3")]([SubResource("Resource_c3t87")])

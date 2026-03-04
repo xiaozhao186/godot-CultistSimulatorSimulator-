@@ -1,0 +1,99 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6r8q5x2y3z4"]
+
+[ext_resource type="Script" path="res://addons/event_chain_editor/scenes/event_node.gd" id="1_event_node"]
+
+[node name="EventNode" type="GraphNode"]
+offset_right = 300.0
+offset_bottom = 200.0
+title = "Event Node"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+script = ExtResource("1_event_node")
+
+[node name="MainContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="TitleEdit" type="LineEdit" parent="MainContainer"]
+layout_mode = 2
+placeholder_text = "Event Title"
+
+[node name="DescEdit" type="TextEdit" parent="MainContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+placeholder_text = "Description"
+wrap_mode = 1
+
+[node name="PropsContainer" type="GridContainer" parent="MainContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="DurLabel" type="Label" parent="MainContainer/PropsContainer"]
+layout_mode = 2
+text = "Duration:"
+
+[node name="DurationSpin" type="SpinBox" parent="MainContainer/PropsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+step = 0.1
+suffix = "s"
+
+[node name="AutoStartCheck" type="CheckBox" parent="MainContainer/PropsContainer"]
+layout_mode = 2
+text = "Auto Start"
+
+[node name="AutoCollectCheck" type="CheckBox" parent="MainContainer/PropsContainer"]
+layout_mode = 2
+text = "Auto Collect"
+
+[node name="RewardsHeader" type="HBoxContainer" parent="MainContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MainContainer/RewardsHeader"]
+layout_mode = 2
+text = "Rewards"
+
+[node name="AddRewardBtn" type="Button" parent="MainContainer/RewardsHeader"]
+layout_mode = 2
+text = "+"
+
+[node name="RewardsContainer" type="VBoxContainer" parent="MainContainer"]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="MainContainer"]
+layout_mode = 2
+
+[node name="SlotsHeader" type="HBoxContainer" parent="MainContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MainContainer/SlotsHeader"]
+layout_mode = 2
+text = "Slots"
+
+[node name="AddSlotBtn" type="Button" parent="MainContainer/SlotsHeader"]
+layout_mode = 2
+text = "+"
+
+[node name="SlotsContainer" type="VBoxContainer" parent="MainContainer"]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="MainContainer"]
+layout_mode = 2
+
+[node name="IncomingHeader" type="HBoxContainer" parent="MainContainer"]
+layout_mode = 2
+
+[node name="IncomingToggleBtn" type="Button" parent="MainContainer/IncomingHeader"]
+layout_mode = 2
+toggle_mode = true
+text = "Incoming Links"
+
+[node name="IncomingLinksContainer" type="VBoxContainer" parent="MainContainer"]
+visible = false
+layout_mode = 2

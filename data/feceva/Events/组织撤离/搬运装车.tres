@@ -1,0 +1,100 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=26 format=3 uid="uid://cetnm0i1c3l52"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_hj3gu"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_7pkjx"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_b25v0"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_b25v0"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_qndkp"]
+[ext_resource type="Resource" uid="uid://q36eyf764uc6" path="res://data/feceva/Events/组织撤离/已装车.tres" id="4_qf5mc"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_qndkp"]
+[ext_resource type="Resource" uid="uid://cep4hhrx7l6r6" path="res://data/feceva/Events/组织撤离/已装车1.tres" id="5_qf5mc"]
+[ext_resource type="Resource" uid="uid://dhdg4riuxu5ua" path="res://data/feceva/Events/组织撤离/已装车2.tres" id="6_pfqq2"]
+
+[sub_resource type="Resource" id="Resource_qndkp"]
+script = ExtResource("2_b25v0")
+tag = "厂区"
+
+[sub_resource type="Resource" id="Resource_pfqq2"]
+script = ExtResource("2_b25v0")
+type = 2
+tag = "工厂工人"
+value = 2
+op = 4
+
+[sub_resource type="Resource" id="Resource_jpmk3"]
+script = ExtResource("3_qndkp")
+target_event = ExtResource("4_qf5mc")
+
+[sub_resource type="Resource" id="Resource_qf5mc"]
+script = ExtResource("1_hj3gu")
+outcomes = Array[ExtResource("3_qndkp")]([SubResource("Resource_jpmk3")])
+conditions = Array[ExtResource("2_b25v0")]([SubResource("Resource_qndkp"), SubResource("Resource_pfqq2")])
+
+[sub_resource type="Resource" id="Resource_dnfca"]
+script = ExtResource("2_b25v0")
+tag = "厂区"
+
+[sub_resource type="Resource" id="Resource_wg7ay"]
+script = ExtResource("2_b25v0")
+type = 2
+tag = "工厂民兵"
+value = 2
+op = 4
+
+[sub_resource type="Resource" id="Resource_p0h0f"]
+script = ExtResource("3_qndkp")
+target_event = ExtResource("5_qf5mc")
+
+[sub_resource type="Resource" id="Resource_20jy4"]
+script = ExtResource("1_hj3gu")
+outcomes = Array[ExtResource("3_qndkp")]([SubResource("Resource_p0h0f")])
+conditions = Array[ExtResource("2_b25v0")]([SubResource("Resource_dnfca"), SubResource("Resource_wg7ay")])
+
+[sub_resource type="Resource" id="Resource_wliak"]
+script = ExtResource("2_b25v0")
+tag = "厂区"
+
+[sub_resource type="Resource" id="Resource_2rg7i"]
+script = ExtResource("2_b25v0")
+type = 2
+tag = "工厂工人"
+value = 1
+op = 4
+
+[sub_resource type="Resource" id="Resource_qgxis"]
+script = ExtResource("2_b25v0")
+type = 2
+tag = "工厂民兵"
+value = 1
+op = 4
+
+[sub_resource type="Resource" id="Resource_wlpkt"]
+script = ExtResource("3_qndkp")
+target_event = ExtResource("6_pfqq2")
+
+[sub_resource type="Resource" id="Resource_x33yl"]
+script = ExtResource("1_hj3gu")
+outcomes = Array[ExtResource("3_qndkp")]([SubResource("Resource_wlpkt")])
+conditions = Array[ExtResource("2_b25v0")]([SubResource("Resource_wliak"), SubResource("Resource_2rg7i"), SubResource("Resource_qgxis")])
+
+[sub_resource type="Resource" id="Resource_hj3gu"]
+script = ExtResource("4_qndkp")
+required_tags = Array[String](["厂区"])
+forbidden_tags = Array[String](["混乱"])
+
+[sub_resource type="Resource" id="Resource_7pkjx"]
+script = ExtResource("4_qndkp")
+forbidden_tags = Array[String](["混乱"])
+
+[sub_resource type="Resource" id="Resource_b25v0"]
+script = ExtResource("4_qndkp")
+forbidden_tags = Array[String](["混乱"])
+
+[resource]
+script = ExtResource("3_b25v0")
+id = "搬运装车"
+title = "拆卸设备"
+description = "将工厂设备拆卸打包，需要工厂工人或民兵将设备转移"
+slots = Array[ExtResource("4_qndkp")]([SubResource("Resource_hj3gu"), SubResource("Resource_7pkjx"), SubResource("Resource_b25v0")])
+duration = 1.0
+branches = Array[ExtResource("1_hj3gu")]([SubResource("Resource_qf5mc"), SubResource("Resource_20jy4"), SubResource("Resource_x33yl")])

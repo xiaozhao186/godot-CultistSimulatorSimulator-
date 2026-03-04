@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://bm4l7n663ykbl"]
+
+[ext_resource type="Texture2D" uid="uid://dfnq54xhu7jn4" path="res://pic/fecevap/p16.jpg" id="1_o3v78"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="2_op43f"]
+
+[resource]
+script = ExtResource("2_op43f")
+id = "wk08"
+name = "厂区"
+description = "工厂厂区"
+icon = ExtResource("1_o3v78")
+tags = Array[String](["厂区", "轰炸目标"])
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

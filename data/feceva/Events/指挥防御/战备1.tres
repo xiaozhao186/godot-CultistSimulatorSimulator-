@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=7 format=3 uid="uid://dj235m3d2wous"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_u6wv3"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_54f28"]
+[ext_resource type="Script" uid="uid://c5kq15ymk63y6" path="res://scripts/CardTransformation.gd" id="3_54f28"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_ymt53"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_rgp3y"]
+
+[sub_resource type="Resource" id="Resource_ymt53"]
+script = ExtResource("2_54f28")
+card_ids = Array[String](["wk02"])
+
+[resource]
+script = ExtResource("3_ymt53")
+id = "战备1"
+title = "武装工人"
+description = "武装完毕"
+duration = 1.0
+auto_start = true
+rewards = Array[ExtResource("2_54f28")]([SubResource("Resource_ymt53")])

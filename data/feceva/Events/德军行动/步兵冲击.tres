@@ -1,0 +1,57 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=19 format=3 uid="uid://dpui21gu311au"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_50ell"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_h7gd8"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_st82r"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_7yh17"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_hkqx4"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_51whg"]
+[ext_resource type="Resource" uid="uid://chtkgi8dyskri" path="res://data/feceva/Events/德军行动/情报战斗.tres" id="4_etbcr"]
+[ext_resource type="Resource" uid="uid://hgio8c581ak3" path="res://data/feceva/Events/德军行动/步兵冲击判定.tres" id="4_hkqx4"]
+[ext_resource type="Resource" uid="uid://bgsdsslpsdiwb" path="res://data/feceva/Events/德军行动/步兵冲击判定1.tres" id="5_knj7l"]
+[ext_resource type="Resource" uid="uid://b0mc3khnbvcw7" path="res://data/feceva/Events/德军行动/步兵冲击判定2.tres" id="6_jlwy8"]
+
+[sub_resource type="Resource" id="Resource_st82r"]
+script = ExtResource("2_st82r")
+tag = "情报"
+
+[sub_resource type="Resource" id="Resource_etbcr"]
+script = ExtResource("3_hkqx4")
+target_event = ExtResource("4_etbcr")
+
+[sub_resource type="Resource" id="Resource_knj7l"]
+script = ExtResource("1_50ell")
+outcomes = Array[ExtResource("3_hkqx4")]([SubResource("Resource_etbcr")])
+conditions = Array[ExtResource("2_st82r")]([SubResource("Resource_st82r")])
+
+[sub_resource type="Resource" id="Resource_jlwy8"]
+script = ExtResource("3_hkqx4")
+target_event = ExtResource("4_hkqx4")
+
+[sub_resource type="Resource" id="Resource_spj4g"]
+script = ExtResource("3_hkqx4")
+target_event = ExtResource("5_knj7l")
+
+[sub_resource type="Resource" id="Resource_equgs"]
+script = ExtResource("3_hkqx4")
+target_event = ExtResource("6_jlwy8")
+
+[sub_resource type="Resource" id="Resource_hkqx4"]
+script = ExtResource("1_50ell")
+outcomes = Array[ExtResource("3_hkqx4")]([SubResource("Resource_jlwy8"), SubResource("Resource_spj4g"), SubResource("Resource_equgs")])
+
+[sub_resource type="Resource" id="Resource_bjxfi"]
+script = ExtResource("4_51whg")
+force_inhale = true
+specific_card_ids = Array[String](["qb01", "qb02", "qb03"])
+action_type = "consume"
+
+[resource]
+script = ExtResource("3_7yh17")
+id = "步兵冲击"
+title = "步兵冲击"
+description = "一支德军轻步兵向厂区发起攻击"
+slots = Array[ExtResource("4_51whg")]([SubResource("Resource_bjxfi")])
+duration = 5.0
+auto_start = true
+branches = Array[ExtResource("1_50ell")]([SubResource("Resource_knj7l"), SubResource("Resource_hkqx4")])

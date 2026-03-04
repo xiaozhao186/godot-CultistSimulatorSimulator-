@@ -1,0 +1,78 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=21 format=3 uid="uid://bv5k5djv8gdad"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_bkqam"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_h0ay3"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_x3mbc"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_q35cm"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_x3mbc"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_q35cm"]
+[ext_resource type="Resource" uid="uid://dppo3xsk42c6s" path="res://data/feceva/Events/结局判断/胜利1.tres" id="4_sum6p"]
+[ext_resource type="Resource" uid="uid://c1mbd5y7u21q" path="res://data/feceva/Events/结局判断/失败.tres" id="5_sum6p"]
+
+[sub_resource type="Resource" id="Resource_x3mbc"]
+script = ExtResource("2_x3mbc")
+type = 6
+attribute = "撤离度"
+card_id = "cp04"
+value = 4
+op = 4
+
+[sub_resource type="Resource" id="Resource_q35cm"]
+script = ExtResource("3_q35cm")
+target_event = ExtResource("4_sum6p")
+
+[sub_resource type="Resource" id="Resource_sum6p"]
+script = ExtResource("1_bkqam")
+outcomes = Array[ExtResource("3_q35cm")]([SubResource("Resource_q35cm")])
+conditions = Array[ExtResource("2_x3mbc")]([SubResource("Resource_x3mbc")])
+
+[sub_resource type="Resource" id="Resource_twdwp"]
+script = ExtResource("2_x3mbc")
+type = 6
+card_id = "fo00"
+
+[sub_resource type="Resource" id="Resource_3e5ss"]
+script = ExtResource("3_q35cm")
+target_event = ExtResource("5_sum6p")
+
+[sub_resource type="Resource" id="Resource_jhnlf"]
+script = ExtResource("1_bkqam")
+outcomes = Array[ExtResource("3_q35cm")]([SubResource("Resource_3e5ss")])
+conditions = Array[ExtResource("2_x3mbc")]([SubResource("Resource_twdwp")])
+
+[sub_resource type="Resource" id="Resource_8mo8m"]
+script = ExtResource("2_x3mbc")
+type = 6
+card_id = "fo10"
+
+[sub_resource type="Resource" id="Resource_teh1r"]
+script = ExtResource("3_q35cm")
+target_event = ExtResource("5_sum6p")
+
+[sub_resource type="Resource" id="Resource_dupum"]
+script = ExtResource("1_bkqam")
+outcomes = Array[ExtResource("3_q35cm")]([SubResource("Resource_teh1r")])
+conditions = Array[ExtResource("2_x3mbc")]([SubResource("Resource_8mo8m")])
+
+[sub_resource type="Resource" id="Resource_cfu4a"]
+script = ExtResource("2_x3mbc")
+type = 6
+card_id = "fo20"
+
+[sub_resource type="Resource" id="Resource_38akm"]
+script = ExtResource("3_q35cm")
+target_event = ExtResource("5_sum6p")
+
+[sub_resource type="Resource" id="Resource_wyqmf"]
+script = ExtResource("1_bkqam")
+outcomes = Array[ExtResource("3_q35cm")]([SubResource("Resource_38akm")])
+conditions = Array[ExtResource("2_x3mbc")]([SubResource("Resource_cfu4a")])
+
+[resource]
+script = ExtResource("3_x3mbc")
+id = "结局初始"
+title = "结局初始"
+duration = 1.0
+auto_start = true
+auto_collect = true
+branches = Array[ExtResource("1_bkqam")]([SubResource("Resource_sum6p"), SubResource("Resource_jhnlf"), SubResource("Resource_dupum"), SubResource("Resource_wyqmf")])

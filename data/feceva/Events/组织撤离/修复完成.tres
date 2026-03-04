@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=9 format=3 uid="uid://db0rq0okqadm"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_dhed6"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_vlbme"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_2tmk3"]
+[ext_resource type="Script" uid="uid://c5kq15ymk63y6" path="res://scripts/CardTransformation.gd" id="3_vlbme"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_2ba15"]
+
+[sub_resource type="Resource" id="Resource_vlbme"]
+script = ExtResource("3_vlbme")
+required_card_id = "wk06"
+resulting_card_id = "wk08"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_2ba15"]
+script = ExtResource("3_vlbme")
+required_card_id = "wk05"
+resulting_card_id = "wk04"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_2tmk3"]
+script = ExtResource("2_vlbme")
+transformations = Array[ExtResource("3_vlbme")]([SubResource("Resource_vlbme"), SubResource("Resource_2ba15")])
+
+[resource]
+script = ExtResource("3_2tmk3")
+id = "修复完成"
+title = "修复完成"
+description = "继续组织撤离吧"
+duration = 1.0
+auto_start = true
+rewards = Array[ExtResource("2_vlbme")]([SubResource("Resource_2tmk3")])

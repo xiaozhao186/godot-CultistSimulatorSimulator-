@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=13 format=3 uid="uid://bhj2fnvosiyyu"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_rmylg"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_2a3gu"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_wd8u6"]
+[ext_resource type="Resource" uid="uid://oo3vvfx2eq4v" path="res://data/feceva/Events/指挥防御/调兵b.tres" id="4_rmylg"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="5_igqlh"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="6_hicoy"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="7_le3ah"]
+
+[sub_resource type="Resource" id="Resource_xvjgk"]
+script = ExtResource("2_2a3gu")
+tag = "军事单位"
+
+[sub_resource type="Resource" id="Resource_wvlvc"]
+script = ExtResource("2_2a3gu")
+tag = "前线"
+
+[sub_resource type="Resource" id="Resource_087jt"]
+script = ExtResource("3_wd8u6")
+target_event = ExtResource("4_rmylg")
+
+[sub_resource type="Resource" id="Resource_ximbw"]
+script = ExtResource("1_rmylg")
+outcomes = Array[ExtResource("3_wd8u6")]([SubResource("Resource_087jt")])
+conditions = Array[ExtResource("2_2a3gu")]([SubResource("Resource_xvjgk"), SubResource("Resource_wvlvc")])
+
+[sub_resource type="Resource" id="Resource_8umvk"]
+script = ExtResource("7_le3ah")
+required_tags = Array[String](["军事单位"])
+action_type = "reward"
+
+[resource]
+script = ExtResource("6_hicoy")
+id = "调兵行动b"
+title = "部队调动"
+description = "将此单位调离前线"
+slots = Array[ExtResource("7_le3ah")]([SubResource("Resource_8umvk")])
+duration = 6.0
+branches = Array[ExtResource("1_rmylg")]([SubResource("Resource_ximbw")])

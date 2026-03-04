@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://c2n1yuyt3spxs"]
+
+[ext_resource type="Texture2D" uid="uid://ik8ru4ii5svj" path="res://pic/fecevap/p6.jpg" id="1_4ljh7"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="2_hutle"]
+
+[resource]
+script = ExtResource("2_hutle")
+id = "wk021"
+name = "前线工厂民兵-北部"
+description = "xx工厂的工人民兵"
+icon = ExtResource("1_4ljh7")
+tags = Array[String](["军事单位", "工厂民兵", "前线", "北部"])
+attributes = Dictionary[StringName, int]({
+&"火力": 1
+})
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

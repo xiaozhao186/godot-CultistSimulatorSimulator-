@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=6 format=3 uid="uid://vmdbtpc8eebl"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_lg6kn"]
+[ext_resource type="Texture2D" uid="uid://dj1px7bo608sv" path="res://icon.svg" id="2_ltn1b"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="3_1legt"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="4_6k1b3"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="5_0iewr"]
+
+[resource]
+script = ExtResource("4_6k1b3")
+id = "ev001"
+title = "事件001"
+description = "这是事件001"
+image = ExtResource("2_ltn1b")
+duration = 1.0
+metadata/_custom_type_script = "uid://d22geur8maor1"

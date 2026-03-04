@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://dg782t0443imh"]
+
+[ext_resource type="Texture2D" uid="uid://brkm5sgcl58xw" path="res://pic/fecevap/p3.jpg" id="1_xap67"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="2_kch45"]
+
+[resource]
+script = ExtResource("2_kch45")
+id = "am021"
+name = "前线机枪班组-北部"
+description = "配备重机枪，正在北部前线组织防御"
+icon = ExtResource("1_xap67")
+tags = Array[String](["军事单位", "前线", "北部"])
+attributes = {
+&"支援": 1,
+&"火力": 2
+}
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

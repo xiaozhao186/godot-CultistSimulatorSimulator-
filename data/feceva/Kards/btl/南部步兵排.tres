@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://d3fruyqhoukny"]
+
+[ext_resource type="Texture2D" uid="uid://bla1qx225k16o" path="res://pic/fecevap/p1.jpg" id="1_y18ky"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="2_dfptj"]
+
+[resource]
+script = ExtResource("2_dfptj")
+id = "am013"
+name = "前线步兵排-南部"
+description = "填线主力，正在南部前线组织防御"
+icon = ExtResource("1_y18ky")
+tags = Array[String](["军事单位", "前线", "南部"])
+attributes = {
+&"火力": 2
+}
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

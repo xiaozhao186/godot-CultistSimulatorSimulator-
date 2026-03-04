@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://b82hk3l8sxwi2"]
+
+[ext_resource type="Texture2D" uid="uid://b8xww573qub8n" path="res://pic/01.jpg" id="1_bgno8"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="1_g1pbe"]
+
+[resource]
+script = ExtResource("1_g1pbe")
+id = "cr01"
+name = "劳动力"
+description = "劳动力"
+icon = ExtResource("1_bgno8")
+tags = Array[String](["劳动力", "钥匙", "沙拉"])
+attributes = {
+&"实例": 1,
+&"拉拉": 3
+}
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

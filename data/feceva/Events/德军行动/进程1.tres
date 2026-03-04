@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=7 format=3 uid="uid://c1ycikbgdco37"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_toqn5"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_qeuij"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_p2582"]
+[ext_resource type="Script" uid="uid://c5kq15ymk63y6" path="res://scripts/CardTransformation.gd" id="3_qeuij"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_qjnk0"]
+
+[sub_resource type="Resource" id="Resource_p2582"]
+script = ExtResource("2_qeuij")
+verb_ids_to_spawn = Array[String](["xd02"])
+delete_source_verb = true
+
+[resource]
+script = ExtResource("3_p2582")
+id = "进程1"
+title = "攻势升级"
+description = "德军准备发动更猛烈的攻击"
+duration = 1.0
+auto_start = true
+auto_collect = true
+rewards = Array[ExtResource("2_qeuij")]([SubResource("Resource_p2582")])

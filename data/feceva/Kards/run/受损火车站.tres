@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://cut72eucu5a6t"]
+
+[ext_resource type="Texture2D" uid="uid://7xfhu6mi62pf" path="res://pic/fecevap/p8.jpg" id="1_1d0q7"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="2_dllxn"]
+
+[resource]
+script = ExtResource("2_dllxn")
+id = "wk05"
+name = "混乱的火车站"
+description = "工厂火车站，轰炸让车站一片混乱，恢复正常运行需要一段时间"
+icon = ExtResource("1_1d0q7")
+tags = Array[String](["火车站", "混乱"])
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

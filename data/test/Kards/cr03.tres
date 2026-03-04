@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://cy66vgnl0n1u4"]
+
+[ext_resource type="Texture2D" uid="uid://dj1px7bo608sv" path="res://icon.svg" id="1_8q1n1"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="1_qh66y"]
+
+[resource]
+script = ExtResource("1_qh66y")
+id = "cr03"
+name = "货币"
+description = "这是货币"
+icon = ExtResource("1_8q1n1")
+attributes = {
+&"货币": 1
+}
+stackable = true
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

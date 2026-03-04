@@ -1,0 +1,76 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=24 format=3 uid="uid://cb5hgh08ltjrq"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_5o53t"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_3mnsu"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_u76pb"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_3mnsu"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_6vgxo"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_6vgxo"]
+[ext_resource type="Resource" uid="uid://cetnm0i1c3l52" path="res://data/feceva/Events/组织撤离/搬运装车.tres" id="4_j60t4"]
+[ext_resource type="Resource" uid="uid://lq2h8vqup103" path="res://data/feceva/Events/组织撤离/发车.tres" id="5_j60t4"]
+[ext_resource type="Resource" uid="uid://b4hm342anaoll" path="res://data/feceva/Events/组织撤离/修复.tres" id="6_0h137"]
+[ext_resource type="Resource" uid="uid://cv2farhl7dhel" path="res://data/feceva/Events/组织撤离/接受增援.tres" id="7_a7ioj"]
+
+[sub_resource type="Resource" id="Resource_3mnsu"]
+script = ExtResource("2_3mnsu")
+tag = "厂区"
+
+[sub_resource type="Resource" id="Resource_6vgxo"]
+script = ExtResource("3_6vgxo")
+target_event = ExtResource("4_j60t4")
+
+[sub_resource type="Resource" id="Resource_j60t4"]
+script = ExtResource("1_5o53t")
+outcomes = Array[ExtResource("3_6vgxo")]([SubResource("Resource_6vgxo")])
+conditions = Array[ExtResource("2_3mnsu")]([SubResource("Resource_3mnsu")])
+
+[sub_resource type="Resource" id="Resource_a7ioj"]
+script = ExtResource("2_3mnsu")
+tag = "火车站"
+
+[sub_resource type="Resource" id="Resource_0rnjk"]
+script = ExtResource("3_6vgxo")
+target_event = ExtResource("5_j60t4")
+
+[sub_resource type="Resource" id="Resource_0h137"]
+script = ExtResource("1_5o53t")
+outcomes = Array[ExtResource("3_6vgxo")]([SubResource("Resource_0rnjk")])
+conditions = Array[ExtResource("2_3mnsu")]([SubResource("Resource_a7ioj")])
+
+[sub_resource type="Resource" id="Resource_n8ct1"]
+script = ExtResource("2_3mnsu")
+tag = "混乱"
+
+[sub_resource type="Resource" id="Resource_nopma"]
+script = ExtResource("3_6vgxo")
+target_event = ExtResource("6_0h137")
+
+[sub_resource type="Resource" id="Resource_xuqp1"]
+script = ExtResource("1_5o53t")
+outcomes = Array[ExtResource("3_6vgxo")]([SubResource("Resource_nopma")])
+conditions = Array[ExtResource("2_3mnsu")]([SubResource("Resource_n8ct1")])
+
+[sub_resource type="Resource" id="Resource_5hge7"]
+script = ExtResource("2_3mnsu")
+tag = "增援"
+
+[sub_resource type="Resource" id="Resource_lfjrn"]
+script = ExtResource("3_6vgxo")
+target_event = ExtResource("7_a7ioj")
+
+[sub_resource type="Resource" id="Resource_q38jw"]
+script = ExtResource("1_5o53t")
+outcomes = Array[ExtResource("3_6vgxo")]([SubResource("Resource_lfjrn")])
+conditions = Array[ExtResource("2_3mnsu")]([SubResource("Resource_5hge7")])
+
+[sub_resource type="Resource" id="Resource_5o53t"]
+script = ExtResource("4_6vgxo")
+
+[resource]
+script = ExtResource("3_3mnsu")
+id = "撤离初始"
+title = "组织撤离"
+description = "进行搬运发车，处理紧急事故等行动"
+slots = Array[ExtResource("4_6vgxo")]([SubResource("Resource_5o53t")])
+duration = 1.0
+instant_branches = Array[ExtResource("1_5o53t")]([SubResource("Resource_j60t4"), SubResource("Resource_0h137"), SubResource("Resource_xuqp1"), SubResource("Resource_q38jw")])

@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=15 format=3 uid="uid://b7k64gw2pksw4"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_se5uc"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_xags0"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_wtd8i"]
+[ext_resource type="Resource" uid="uid://b8o5b7ynseyo4" path="res://data/test/Events/beforetest/ev02.tres" id="4_vblqp"]
+[ext_resource type="Texture2D" uid="uid://dj1px7bo608sv" path="res://icon.svg" id="6_t7bw2"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="7_bhtms"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="8_5xaje"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="9_3ptym"]
+
+[sub_resource type="Resource" id="Resource_xrc57"]
+script = ExtResource("2_xags0")
+tag = "劳动力"
+metadata/_custom_type_script = "uid://dddlkxe4be6uv"
+
+[sub_resource type="Resource" id="Resource_yrdpl"]
+script = ExtResource("2_xags0")
+tag = "脑力"
+metadata/_custom_type_script = "uid://dddlkxe4be6uv"
+
+[sub_resource type="Resource" id="Resource_se5uc"]
+script = ExtResource("3_wtd8i")
+target_event = ExtResource("4_vblqp")
+metadata/_custom_type_script = "uid://dhlurc1qow4gw"
+
+[sub_resource type="Resource" id="Resource_tqp2l"]
+script = ExtResource("1_se5uc")
+outcomes = Array[ExtResource("3_wtd8i")]([SubResource("Resource_se5uc")])
+conditions = Array[ExtResource("2_xags0")]([SubResource("Resource_xrc57"), SubResource("Resource_yrdpl")])
+metadata/_custom_type_script = "uid://bj02frdeiskfx"
+
+[sub_resource type="Resource" id="Resource_gr8ap"]
+script = ExtResource("9_3ptym")
+metadata/_custom_type_script = "uid://bib4cm0qyyk0k"
+
+[sub_resource type="Resource" id="Resource_wtd8i"]
+script = ExtResource("9_3ptym")
+metadata/_custom_type_script = "uid://bib4cm0qyyk0k"
+
+[resource]
+script = ExtResource("8_5xaje")
+id = "ev04"
+title = "事件04"
+description = "这是事件04"
+image = ExtResource("6_t7bw2")
+slots = Array[ExtResource("9_3ptym")]([SubResource("Resource_gr8ap"), SubResource("Resource_wtd8i")])
+duration = 5.0
+branches = Array[ExtResource("1_se5uc")]([SubResource("Resource_tqp2l")])
+metadata/_custom_type_script = "uid://d22geur8maor1"

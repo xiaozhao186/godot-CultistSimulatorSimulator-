@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=8 format=3 uid="uid://qwbguj6seoii"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_cic41"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_my6ta"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_by46p"]
+[ext_resource type="Script" uid="uid://c5kq15ymk63y6" path="res://scripts/CardTransformation.gd" id="3_my6ta"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_j20mr"]
+
+[sub_resource type="Resource" id="Resource_my6ta"]
+script = ExtResource("3_my6ta")
+action = "return"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_by46p"]
+script = ExtResource("2_my6ta")
+transformations = Array[ExtResource("3_my6ta")]([SubResource("Resource_my6ta")])
+
+[resource]
+script = ExtResource("3_by46p")
+id = "轰炸失败结果"
+title = "敌机轰炸"
+description = "轰炸没有给我们带来损失"
+duration = 1.0
+auto_start = true
+rewards = Array[ExtResource("2_my6ta")]([SubResource("Resource_by46p")])

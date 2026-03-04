@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=7 format=3 uid="uid://cr8j2v26wsvjl"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_bvht3"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_win0f"]
+[ext_resource type="Script" uid="uid://c5kq15ymk63y6" path="res://scripts/CardTransformation.gd" id="3_54vtp"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="4_5hmib"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="5_peqd8"]
+
+[sub_resource type="Resource" id="Resource_m7xrr"]
+script = ExtResource("2_win0f")
+card_ids = Array[String](["am04", "am01"])
+
+[resource]
+script = ExtResource("4_5hmib")
+id = "接受增援完成1"
+title = "接受后方增援"
+description = "增援抵达"
+duration = 1.0
+auto_start = true
+rewards = Array[ExtResource("2_win0f")]([SubResource("Resource_m7xrr")])

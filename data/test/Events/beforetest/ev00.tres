@@ -1,0 +1,77 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=21 format=3 uid="uid://c7k8ucc1dguhc"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_tx358"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_22qgn"]
+[ext_resource type="Resource" uid="uid://bj0lmxipav6cp" path="res://data/test/Events/beforetest/ev01.tres" id="2_gr8ap"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_lao43"]
+[ext_resource type="Resource" uid="uid://b8o5b7ynseyo4" path="res://data/test/Events/beforetest/ev02.tres" id="3_cuxou"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_tqp2l"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_xrc57"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_gr8ap"]
+[ext_resource type="Texture2D" uid="uid://dj1px7bo608sv" path="res://icon.svg" id="4_lao43"]
+[ext_resource type="Resource" uid="uid://b7k64gw2pksw4" path="res://data/test/Events/beforetest/ev04.tres" id="5_lao43"]
+
+[sub_resource type="Resource" id="Resource_xrc57"]
+script = ExtResource("2_lao43")
+tag = "劳动力"
+metadata/_custom_type_script = "uid://dddlkxe4be6uv"
+
+[sub_resource type="Resource" id="Resource_dujus"]
+script = ExtResource("3_xrc57")
+target_event = ExtResource("2_gr8ap")
+metadata/_custom_type_script = "uid://dhlurc1qow4gw"
+
+[sub_resource type="Resource" id="Resource_tqp2l"]
+script = ExtResource("1_tx358")
+outcomes = Array[ExtResource("3_xrc57")]([SubResource("Resource_dujus")])
+conditions = Array[ExtResource("2_lao43")]([SubResource("Resource_xrc57")])
+metadata/_custom_type_script = "uid://bj02frdeiskfx"
+
+[sub_resource type="Resource" id="Resource_bao2w"]
+script = ExtResource("2_lao43")
+tag = "脑力"
+metadata/_custom_type_script = "uid://dddlkxe4be6uv"
+
+[sub_resource type="Resource" id="Resource_dqiy3"]
+script = ExtResource("3_xrc57")
+target_event = ExtResource("3_cuxou")
+metadata/_custom_type_script = "uid://dhlurc1qow4gw"
+
+[sub_resource type="Resource" id="Resource_cuxou"]
+script = ExtResource("1_tx358")
+outcomes = Array[ExtResource("3_xrc57")]([SubResource("Resource_dqiy3")])
+conditions = Array[ExtResource("2_lao43")]([SubResource("Resource_bao2w")])
+metadata/_custom_type_script = "uid://bj02frdeiskfx"
+
+[sub_resource type="Resource" id="Resource_opitr"]
+script = ExtResource("2_lao43")
+type = 1
+attribute = "货币"
+value = 1
+metadata/_custom_type_script = "uid://dddlkxe4be6uv"
+
+[sub_resource type="Resource" id="Resource_7c5fp"]
+script = ExtResource("3_xrc57")
+target_event = ExtResource("5_lao43")
+metadata/_custom_type_script = "uid://dhlurc1qow4gw"
+
+[sub_resource type="Resource" id="Resource_lao43"]
+script = ExtResource("1_tx358")
+outcomes = Array[ExtResource("3_xrc57")]([SubResource("Resource_7c5fp")])
+conditions = Array[ExtResource("2_lao43")]([SubResource("Resource_opitr")])
+metadata/_custom_type_script = "uid://bj02frdeiskfx"
+
+[sub_resource type="Resource" id="Resource_gr8ap"]
+script = ExtResource("4_gr8ap")
+metadata/_custom_type_script = "uid://bib4cm0qyyk0k"
+
+[resource]
+script = ExtResource("3_tqp2l")
+id = "ev00"
+title = "事件00"
+description = "这是事件00"
+image = ExtResource("4_lao43")
+slots = Array[ExtResource("4_gr8ap")]([SubResource("Resource_gr8ap")])
+duration = 1.0
+branches = Array[ExtResource("1_tx358")]([SubResource("Resource_tqp2l"), SubResource("Resource_cuxou"), SubResource("Resource_lao43")])
+metadata/_custom_type_script = "uid://d22geur8maor1"

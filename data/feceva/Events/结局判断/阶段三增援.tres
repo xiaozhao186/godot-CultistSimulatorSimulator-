@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=11 format=3 uid="uid://cnpn14xcg4jab"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_o6xvn"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_s4lx7"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_22dua"]
+[ext_resource type="Resource" uid="uid://mr74rp7hocgv" path="res://data/feceva/Events/结局判断/增援3.tres" id="4_o6xvn"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="5_w7ckk"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="6_bu8gy"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="7_38idt"]
+
+[sub_resource type="Resource" id="Resource_0pirt"]
+script = ExtResource("2_s4lx7")
+type = 6
+tag = "cp03"
+card_id = "cp03"
+
+[sub_resource type="Resource" id="Resource_y82gc"]
+script = ExtResource("3_22dua")
+target_event = ExtResource("4_o6xvn")
+
+[sub_resource type="Resource" id="Resource_kx5pt"]
+script = ExtResource("1_o6xvn")
+outcomes = Array[ExtResource("3_22dua")]([SubResource("Resource_y82gc")])
+conditions = Array[ExtResource("2_s4lx7")]([SubResource("Resource_0pirt")])
+
+[resource]
+script = ExtResource("6_bu8gy")
+id = "阶段三增援"
+duration = 5.0
+auto_start = true
+auto_collect = true
+branches = Array[ExtResource("1_o6xvn")]([SubResource("Resource_kx5pt")])

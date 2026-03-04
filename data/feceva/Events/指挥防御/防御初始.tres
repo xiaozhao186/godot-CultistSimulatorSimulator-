@@ -1,0 +1,87 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=26 format=3 uid="uid://dy6uvo1itn10l"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_e30qc"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_2jbji"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_syaki"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_2jbji"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_jf1eo"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_jf1eo"]
+[ext_resource type="Resource" uid="uid://cujjec5rh7i5x" path="res://data/feceva/Events/指挥防御/调兵行动.tres" id="4_p0on4"]
+[ext_resource type="Resource" uid="uid://bhj2fnvosiyyu" path="res://data/feceva/Events/指挥防御/调兵行动b.tres" id="5_p0on4"]
+[ext_resource type="Resource" uid="uid://khkmtk7ajyoe" path="res://data/feceva/Events/指挥防御/防线行动.tres" id="6_4f2bo"]
+[ext_resource type="Resource" uid="uid://4xp34tq2h61w" path="res://data/feceva/Events/指挥防御/战备.tres" id="7_4f2bo"]
+
+[sub_resource type="Resource" id="Resource_jf1eo"]
+script = ExtResource("2_2jbji")
+tag = "军事单位"
+
+[sub_resource type="Resource" id="Resource_4f2bo"]
+script = ExtResource("2_2jbji")
+tag = "预备"
+
+[sub_resource type="Resource" id="Resource_sm2yn"]
+script = ExtResource("3_jf1eo")
+target_event = ExtResource("4_p0on4")
+
+[sub_resource type="Resource" id="Resource_p0on4"]
+script = ExtResource("1_e30qc")
+outcomes = Array[ExtResource("3_jf1eo")]([SubResource("Resource_sm2yn")])
+conditions = Array[ExtResource("2_2jbji")]([SubResource("Resource_jf1eo"), SubResource("Resource_4f2bo")])
+
+[sub_resource type="Resource" id="Resource_80q2j"]
+script = ExtResource("2_2jbji")
+tag = "军事单位"
+
+[sub_resource type="Resource" id="Resource_ly5fv"]
+script = ExtResource("2_2jbji")
+tag = "前线"
+
+[sub_resource type="Resource" id="Resource_gw6gp"]
+script = ExtResource("3_jf1eo")
+target_event = ExtResource("5_p0on4")
+
+[sub_resource type="Resource" id="Resource_2xrly"]
+script = ExtResource("1_e30qc")
+outcomes = Array[ExtResource("3_jf1eo")]([SubResource("Resource_gw6gp")])
+conditions = Array[ExtResource("2_2jbji")]([SubResource("Resource_80q2j"), SubResource("Resource_ly5fv")])
+
+[sub_resource type="Resource" id="Resource_vej6g"]
+script = ExtResource("2_2jbji")
+tag = "防线"
+
+[sub_resource type="Resource" id="Resource_ldfng"]
+script = ExtResource("3_jf1eo")
+target_event = ExtResource("6_4f2bo")
+
+[sub_resource type="Resource" id="Resource_a6wwd"]
+script = ExtResource("1_e30qc")
+outcomes = Array[ExtResource("3_jf1eo")]([SubResource("Resource_ldfng")])
+conditions = Array[ExtResource("2_2jbji")]([SubResource("Resource_vej6g")])
+
+[sub_resource type="Resource" id="Resource_0gkle"]
+script = ExtResource("2_2jbji")
+tag = "工厂工人"
+
+[sub_resource type="Resource" id="Resource_8ef4o"]
+script = ExtResource("3_jf1eo")
+target_event = ExtResource("7_4f2bo")
+
+[sub_resource type="Resource" id="Resource_q0fky"]
+script = ExtResource("1_e30qc")
+outcomes = Array[ExtResource("3_jf1eo")]([SubResource("Resource_8ef4o")])
+conditions = Array[ExtResource("2_2jbji")]([SubResource("Resource_0gkle")])
+
+[sub_resource type="Resource" id="Resource_2jbji"]
+script = ExtResource("4_jf1eo")
+forbidden_attributes = Dictionary[StringName, int]({
+&"稳固度": 3
+})
+
+[resource]
+script = ExtResource("3_2jbji")
+id = "防御初始"
+title = "指挥防御"
+description = "进行加固防线，调动部队等行动"
+slots = Array[ExtResource("4_jf1eo")]([SubResource("Resource_2jbji")])
+duration = 1.0
+instant_branches = Array[ExtResource("1_e30qc")]([SubResource("Resource_p0on4"), SubResource("Resource_2xrly"), SubResource("Resource_a6wwd"), SubResource("Resource_q0fky")])

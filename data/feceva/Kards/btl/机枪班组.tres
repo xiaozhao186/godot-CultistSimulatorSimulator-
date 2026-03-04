@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://cfhr8j5571cmd"]
+
+[ext_resource type="Texture2D" uid="uid://brkm5sgcl58xw" path="res://pic/fecevap/p3.jpg" id="1_hqxtq"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="2_65e1h"]
+
+[resource]
+script = ExtResource("2_65e1h")
+id = "am02"
+name = "机枪班组"
+description = "配备重机枪"
+icon = ExtResource("1_hqxtq")
+tags = Array[String](["军事单位", "预备"])
+attributes = {
+&"支援": 1,
+&"火力": 2
+}
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

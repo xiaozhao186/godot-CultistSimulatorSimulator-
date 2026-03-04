@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=6 format=3 uid="uid://bxmcar7en2hol"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_114ai"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_w34yj"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_0yv42"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_jr77b"]
+
+[sub_resource type="Resource" id="Resource_114ai"]
+script = ExtResource("2_w34yj")
+card_ids = Array[String](["cr04"])
+
+[resource]
+script = ExtResource("3_0yv42")
+id = "e2"
+title = "系欸借我哦"
+description = "节节高"
+duration = 2.0
+rewards = Array[ExtResource("2_w34yj")]([SubResource("Resource_114ai")])

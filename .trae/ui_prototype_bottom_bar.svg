@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect x="0" y="0" width="1200" height="700" fill="#1b1b1b"/>
+  <rect x="0" y="616" width="1200" height="84" fill="#2a2a2a"/>
+  <text x="24" y="662" fill="#aaaaaa" font-size="18" font-family="Arial">Left reserved area (future info)</text>
+
+  <g transform="translate(1016 626)">
+    <rect x="0" y="0" width="48" height="48" rx="8" fill="#3a3a3a"/>
+    <text x="24" y="30" text-anchor="middle" fill="#ffffff" font-size="16" font-family="Arial">⏸</text>
+    <text x="24" y="68" text-anchor="middle" fill="#bbbbbb" font-size="12" font-family="Arial">Pause</text>
+  </g>
+
+  <g transform="translate(1072 626)">
+    <rect x="0" y="0" width="48" height="48" rx="8" fill="#3a3a3a"/>
+    <text x="24" y="30" text-anchor="middle" fill="#ffffff" font-size="16" font-family="Arial">1×</text>
+    <text x="24" y="68" text-anchor="middle" fill="#bbbbbb" font-size="12" font-family="Arial">Speed</text>
+  </g>
+
+  <g transform="translate(1128 626)">
+    <rect x="0" y="0" width="48" height="48" rx="8" fill="#3a3a3a"/>
+    <text x="24" y="30" text-anchor="middle" fill="#ffffff" font-size="16" font-family="Arial">⚙</text>
+    <text x="24" y="68" text-anchor="middle" fill="#bbbbbb" font-size="12" font-family="Arial">Settings</text>
+  </g>
+
+  <text x="24" y="40" fill="#ffffff" font-size="22" font-family="Arial">Bottom Bar Prototype</text>
+  <text x="24" y="68" fill="#bbbbbb" font-size="14" font-family="Arial">Height ~10% of screen; buttons 48×48; spacing 8.</text>
+</svg>

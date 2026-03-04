@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="EventGraphData" load_steps=2 format=3 uid="uid://bt1se4xjkxj06"]
+
+[ext_resource type="Script" uid="uid://cqb5k7gwr66qc" path="res://addons/event_chain_editor/resources/event_graph_data.gd" id="1_3504i"]
+
+[resource]
+script = ExtResource("1_3504i")
+nodes = {
+"res://data/feceva/Events/结局判断/nting.tres": Vector2(-1280, -580),
+"res://data/feceva/Events/结局判断/伤亡事件.tres": Vector2(620, -140),
+"res://data/feceva/Events/结局判断/增援1.tres": Vector2(-1040, -2020),
+"res://data/feceva/Events/结局判断/增援2.tres": Vector2(-60, -2040),
+"res://data/feceva/Events/结局判断/增援3.tres": Vector2(860, -2040),
+"res://data/feceva/Events/结局判断/增援一号.tres": Vector2(-1040, -2860),
+"res://data/feceva/Events/结局判断/增援三号.tres": Vector2(-80, -2860),
+"res://data/feceva/Events/结局判断/增援二号.tres": Vector2(-540, -2860),
+"res://data/feceva/Events/结局判断/失败.tres": Vector2(-660, 660),
+"res://data/feceva/Events/结局判断/无事发生.tres": Vector2(1440, -1560),
+"res://data/feceva/Events/结局判断/突发事件.tres": Vector2(-1280, -1260),
+"res://data/feceva/Events/结局判断/突发事件初始.tres": Vector2(-160, -1200),
+"res://data/feceva/Events/结局判断/结局初始.tres": Vector2(-1400, 40),
+"res://data/feceva/Events/结局判断/胜利1.tres": Vector2(-660, -100),
+"res://data/feceva/Events/结局判断/车站事故.tres": Vector2(1440, -880),
+"res://data/feceva/Events/结局判断/车站事故1.tres": Vector2(2020, -1040),
+"res://data/feceva/Events/结局判断/车站事故2.tres": Vector2(2020, -360),
+"res://data/feceva/Events/结局判断/进程初始.tres": Vector2(-1820, -1240),
+"res://data/feceva/Events/结局判断/阶段三增援.tres": Vector2(380, -2080),
+"res://data/feceva/Events/结局判断/阶段二增援.tres": Vector2(-560, -2080),
+"res://data/feceva/Events/结局判断/阶段增援.tres": Vector2(-1640, -2100)
+}
+metadata/_custom_type_script = "uid://cqb5k7gwr66qc"

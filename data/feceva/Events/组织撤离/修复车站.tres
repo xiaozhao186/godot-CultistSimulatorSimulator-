@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=14 format=3 uid="uid://bee62m7kikuf"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_5v2dw"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_olup7"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_w3q4s"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_n53f1"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_olup7"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_n53f1"]
+[ext_resource type="Resource" uid="uid://db0rq0okqadm" path="res://data/feceva/Events/组织撤离/修复完成.tres" id="4_vv7jr"]
+
+[sub_resource type="Resource" id="Resource_olup7"]
+script = ExtResource("2_olup7")
+tag = "火车站"
+
+[sub_resource type="Resource" id="Resource_n53f1"]
+script = ExtResource("2_olup7")
+tag = "工程师"
+
+[sub_resource type="Resource" id="Resource_p7nyn"]
+script = ExtResource("3_n53f1")
+target_event = ExtResource("4_vv7jr")
+
+[sub_resource type="Resource" id="Resource_vv7jr"]
+script = ExtResource("1_5v2dw")
+outcomes = Array[ExtResource("3_n53f1")]([SubResource("Resource_p7nyn")])
+conditions = Array[ExtResource("2_olup7")]([SubResource("Resource_olup7"), SubResource("Resource_n53f1")])
+
+[sub_resource type="Resource" id="Resource_5v2dw"]
+script = ExtResource("4_n53f1")
+required_tags = Array[String](["混乱"])
+action_type = "reward"
+
+[sub_resource type="Resource" id="Resource_g4euq"]
+script = ExtResource("4_n53f1")
+
+[resource]
+script = ExtResource("3_olup7")
+id = "修复车站"
+title = "恢复撤离"
+description = "德军的袭击结束了，现在得处理那些废墟了，派出工程师修复受损铁路设施"
+slots = Array[ExtResource("4_n53f1")]([SubResource("Resource_5v2dw"), SubResource("Resource_g4euq")])
+branches = Array[ExtResource("1_5v2dw")]([SubResource("Resource_vv7jr")])

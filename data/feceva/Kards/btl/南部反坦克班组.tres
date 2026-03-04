@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://clorkrq6pc54q"]
+
+[ext_resource type="Texture2D" uid="uid://dy6qe5b2os0gp" path="res://pic/fecevap/p4.jpg" id="1_pi0lk"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="2_uu750"]
+
+[resource]
+script = ExtResource("2_uu750")
+id = "am033"
+name = "前线反坦克班组-南部"
+description = "配备反坦克炮，正在南部前线组织防御"
+icon = ExtResource("1_pi0lk")
+tags = Array[String](["军事单位", "前线", "南部"])
+attributes = {
+&"反坦克": 3,
+&"支援": 1,
+&"火力": 1
+}
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

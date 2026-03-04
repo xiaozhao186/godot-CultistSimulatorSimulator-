@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="VerbData" load_steps=4 format=3 uid="uid://eqas6f7535lb"]
+
+[ext_resource type="Resource" uid="uid://cluynunept3u" path="res://data/feceva/Events/结局判断/突发事件初始.tres" id="1_f1l1w"]
+[ext_resource type="Script" uid="uid://i1lcnlm6wld" path="res://scripts/VerbData.gd" id="1_fybff"]
+[ext_resource type="Texture2D" uid="uid://d0ytkkmn1jbcf" path="res://pic/fecevap/pv4.jpg" id="2_f1l1w"]
+
+[resource]
+script = ExtResource("1_fybff")
+id = "tf01"
+title = "突发事件"
+icon = ExtResource("2_f1l1w")
+default_event = ExtResource("1_f1l1w")
+metadata/_custom_type_script = "uid://i1lcnlm6wld"

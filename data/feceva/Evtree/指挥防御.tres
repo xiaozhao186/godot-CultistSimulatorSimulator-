@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="EventGraphData" load_steps=2 format=3 uid="uid://c6t2fcavrel4c"]
+
+[ext_resource type="Script" uid="uid://cqb5k7gwr66qc" path="res://addons/event_chain_editor/resources/event_graph_data.gd" id="1_644wk"]
+
+[resource]
+script = ExtResource("1_644wk")
+nodes = {
+"res://data/feceva/Events/指挥防御/侦察行动.tres": Vector2(-1380, -180),
+"res://data/feceva/Events/指挥防御/侦察行动结果.tres": Vector2(-120, -300),
+"res://data/feceva/Events/指挥防御/侦察行动结果1.tres": Vector2(-120, 480),
+"res://data/feceva/Events/指挥防御/侦察行动结果2.tres": Vector2(-120, 1200),
+"res://data/feceva/Events/指挥防御/侦察行动结果3.tres": Vector2(-120, 1920),
+"res://data/feceva/Events/指挥防御/战备.tres": Vector2(-1100, -2920),
+"res://data/feceva/Events/指挥防御/战备1.tres": Vector2(-480, -2920),
+"res://data/feceva/Events/指挥防御/提升稳固度.tres": Vector2(-1340, -1560),
+"res://data/feceva/Events/指挥防御/稳固度已提升.tres": Vector2(-720, -900),
+"res://data/feceva/Events/指挥防御/调兵b.tres": Vector2(-1440, -3800),
+"res://data/feceva/Events/指挥防御/调兵东部.tres": Vector2(-1440, -5320),
+"res://data/feceva/Events/指挥防御/调兵北部.tres": Vector2(-1440, -6080),
+"res://data/feceva/Events/指挥防御/调兵南部.tres": Vector2(-1440, -4560),
+"res://data/feceva/Events/指挥防御/调兵行动.tres": Vector2(-2160, -5780),
+"res://data/feceva/Events/指挥防御/调兵行动b.tres": Vector2(-2180, -3840),
+"res://data/feceva/Events/指挥防御/防御初始.tres": Vector2(-2840, -3540),
+"res://data/feceva/Events/指挥防御/防线行动.tres": Vector2(-2100, -1620)
+}
+metadata/_custom_type_script = "uid://cqb5k7gwr66qc"

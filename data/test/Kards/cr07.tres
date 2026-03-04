@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://bd1qlkxejluth"]
+
+[ext_resource type="Texture2D" uid="uid://dj1px7bo608sv" path="res://icon.svg" id="1_8puf6"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="2_20i5m"]
+
+[resource]
+script = ExtResource("2_20i5m")
+id = "cr07"
+name = "介绍信"
+description = "一封介绍信"
+icon = ExtResource("1_8puf6")
+tags = Array[String](["证明"])
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

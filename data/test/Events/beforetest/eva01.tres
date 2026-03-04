@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=21 format=3 uid="uid://d224sxtku1b5d"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_kvewo"]
+[ext_resource type="Texture2D" uid="uid://dj1px7bo608sv" path="res://icon.svg" id="2_oeesc"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="3_377pm"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_l54qu"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="4_l54qu"]
+[ext_resource type="Resource" uid="uid://bj0lmxipav6cp" path="res://data/test/Events/beforetest/ev01.tres" id="4_mdino"]
+[ext_resource type="Resource" uid="uid://b8o5b7ynseyo4" path="res://data/test/Events/beforetest/ev02.tres" id="5_0yy50"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="5_mdino"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="6_0yy50"]
+
+[sub_resource type="Resource" id="Resource_oeesc"]
+script = ExtResource("3_377pm")
+tag = "劳动力"
+metadata/_custom_type_script = "uid://dddlkxe4be6uv"
+
+[sub_resource type="Resource" id="Resource_mdino"]
+script = ExtResource("3_377pm")
+tag = "脑力"
+metadata/_custom_type_script = "uid://dddlkxe4be6uv"
+
+[sub_resource type="Resource" id="Resource_cibai"]
+script = ExtResource("3_l54qu")
+target_event = ExtResource("4_mdino")
+probability = 0.5
+metadata/_custom_type_script = "uid://dhlurc1qow4gw"
+
+[sub_resource type="Resource" id="Resource_kia57"]
+script = ExtResource("3_l54qu")
+target_event = ExtResource("5_0yy50")
+probability = 0.5
+metadata/_custom_type_script = "uid://dhlurc1qow4gw"
+
+[sub_resource type="Resource" id="Resource_0yy50"]
+script = ExtResource("1_kvewo")
+outcomes = Array[ExtResource("3_l54qu")]([SubResource("Resource_cibai"), SubResource("Resource_kia57")])
+conditions = Array[ExtResource("3_377pm")]([SubResource("Resource_oeesc"), SubResource("Resource_mdino")])
+metadata/_custom_type_script = "uid://bj02frdeiskfx"
+
+[sub_resource type="Resource" id="Resource_377pm"]
+script = ExtResource("6_0yy50")
+metadata/_custom_type_script = "uid://bib4cm0qyyk0k"
+
+[sub_resource type="Resource" id="Resource_l54qu"]
+script = ExtResource("6_0yy50")
+action_type = "consume"
+metadata/_custom_type_script = "uid://bib4cm0qyyk0k"
+
+[sub_resource type="Resource" id="Resource_r55lw"]
+script = ExtResource("6_0yy50")
+metadata/_custom_type_script = "uid://bib4cm0qyyk0k"
+
+[sub_resource type="Resource" id="Resource_up5wj"]
+script = ExtResource("6_0yy50")
+metadata/_custom_type_script = "uid://bib4cm0qyyk0k"
+
+[sub_resource type="Resource" id="Resource_pte5m"]
+script = ExtResource("6_0yy50")
+metadata/_custom_type_script = "uid://bib4cm0qyyk0k"
+
+[sub_resource type="Resource" id="Resource_ja5ye"]
+script = ExtResource("6_0yy50")
+metadata/_custom_type_script = "uid://bib4cm0qyyk0k"
+
+[resource]
+script = ExtResource("5_mdino")
+id = "eva01"
+title = "事件01"
+description = "这是一个01"
+image = ExtResource("2_oeesc")
+slots = Array[ExtResource("6_0yy50")]([SubResource("Resource_377pm"), SubResource("Resource_l54qu"), SubResource("Resource_r55lw"), SubResource("Resource_up5wj"), SubResource("Resource_pte5m"), SubResource("Resource_ja5ye")])
+duration = 5.0
+branches = Array[ExtResource("1_kvewo")]([SubResource("Resource_0yy50")])
+metadata/_custom_type_script = "uid://d22geur8maor1"

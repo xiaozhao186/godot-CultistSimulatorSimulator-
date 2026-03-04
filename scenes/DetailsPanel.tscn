@@ -1,0 +1,78 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxkyiwbpr8vom"]
+
+[ext_resource type="Script" uid="uid://bpqjspqhevpcd" path="res://scripts/DetailsPanel.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://ccivh1ytbj52r" path="res://pic/base/cardlay.png" id="2_bg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1"]
+texture = ExtResource("2_bg")
+
+[node name="DetailsPanel" type="Panel"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 440.0
+offset_top = -520.0
+offset_right = 940.0
+offset_bottom = -320.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1")
+script = ExtResource("1_script")
+
+[node name="CloseButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 40.0
+offset_bottom = 40.0
+text = "X"
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 10.0
+offset_right = 350.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Title"
+vertical_alignment = 1
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -140.0
+offset_top = 15.0
+offset_right = -20.0
+offset_bottom = 135.0
+grow_horizontal = 0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Desc" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 45.0
+offset_right = 355.0
+offset_bottom = 136.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Description..."
+
+[node name="AttributesContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -480.0
+offset_top = -60.0
+offset_right = -20.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+alignment = 2

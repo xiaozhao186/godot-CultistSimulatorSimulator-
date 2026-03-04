@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cqojtahy2n5ru"
+path="res://.godot/imported/伏尔加船夫 Эй, ухнем!.mp3-9e7fbdb2a24e23a84955ceb02b5baf7e.mp3str"
+
+[deps]
+
+source_file="res://sounds/music/伏尔加船夫 Эй, ухнем!.mp3"
+dest_files=["res://.godot/imported/伏尔加船夫 Эй, ухнем!.mp3-9e7fbdb2a24e23a84955ceb02b5baf7e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

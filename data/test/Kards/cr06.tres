@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://cfn00y00evdft"]
+
+[ext_resource type="Texture2D" uid="uid://c8f8k6tflaxme" path="res://pic/02.jpg" id="1_a8mo5"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="2_p43mq"]
+
+[resource]
+script = ExtResource("2_p43mq")
+id = "cr06"
+name = "主角a"
+description = "主角a"
+icon = ExtResource("1_a8mo5")
+tags = Array[String](["主角"])
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

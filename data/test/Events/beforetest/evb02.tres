@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=13 format=3 uid="uid://bdy1acs0b2ls6"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_whux7"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_4tviy"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_km7jo"]
+[ext_resource type="Resource" uid="uid://duwicmdf3low6" path="res://data/test/Events/beforetest/evb03.tres" id="4_exouy"]
+[ext_resource type="Texture2D" uid="uid://dj1px7bo608sv" path="res://icon.svg" id="5_d4yc1"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="6_oaga4"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="7_q38vi"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="8_ss022"]
+
+[sub_resource type="Resource" id="Resource_oeesc"]
+script = ExtResource("2_4tviy")
+tag = "主角"
+metadata/_custom_type_script = "uid://dddlkxe4be6uv"
+
+[sub_resource type="Resource" id="Resource_xdvc6"]
+script = ExtResource("3_km7jo")
+target_event = ExtResource("4_exouy")
+metadata/_custom_type_script = "uid://dhlurc1qow4gw"
+
+[sub_resource type="Resource" id="Resource_0yy50"]
+script = ExtResource("1_whux7")
+outcomes = Array[ExtResource("3_km7jo")]([SubResource("Resource_xdvc6")])
+conditions = Array[ExtResource("2_4tviy")]([SubResource("Resource_oeesc")])
+metadata/_custom_type_script = "uid://bj02frdeiskfx"
+
+[sub_resource type="Resource" id="Resource_377pm"]
+script = ExtResource("8_ss022")
+metadata/_custom_type_script = "uid://bib4cm0qyyk0k"
+
+[resource]
+script = ExtResource("7_q38vi")
+id = "evb02"
+title = "请问你是？"
+description = "叩响房门之后，一道低沉的声音传出"
+image = ExtResource("5_d4yc1")
+slots = Array[ExtResource("8_ss022")]([SubResource("Resource_377pm")])
+duration = 1.0
+branches = Array[ExtResource("1_whux7")]([SubResource("Resource_0yy50")])
+metadata/_custom_type_script = "uid://d22geur8maor1"

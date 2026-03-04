@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://bj1x1fknu1xio"]
+
+[ext_resource type="Texture2D" uid="uid://d1vj6g62265wl" path="res://pic/03.jpeg" id="1_ad2va"]
+[ext_resource type="Script" uid="uid://bij2bttqni5bm" path="res://scripts/CardData.gd" id="2_va5s7"]
+
+[resource]
+script = ExtResource("2_va5s7")
+id = "pc03"
+name = "增援机会"
+description = "随着撤离工作推进，后方指挥部提供了宝贵的增援机会。"
+icon = ExtResource("1_ad2va")
+tags = Array[String](["增援"])
+attributes = Dictionary[StringName, int]({
+&"波次": 3
+})
+lifetime = 30.0
+metadata/_custom_type_script = "uid://bij2bttqni5bm"

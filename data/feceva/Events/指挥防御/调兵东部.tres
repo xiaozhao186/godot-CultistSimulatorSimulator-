@@ -1,0 +1,57 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=13 format=3 uid="uid://cpp68yor3i7ud"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_oy0m8"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_e73ev"]
+[ext_resource type="Script" uid="uid://c5kq15ymk63y6" path="res://scripts/CardTransformation.gd" id="3_dmlaq"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="4_lx8mf"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="5_dgfjs"]
+
+[sub_resource type="Resource" id="Resource_7abhh"]
+script = ExtResource("3_dmlaq")
+required_card_id = "am01"
+resulting_card_id = "am012"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_m5vfr"]
+script = ExtResource("3_dmlaq")
+required_card_id = "am02"
+resulting_card_id = "am022"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_h6ixp"]
+script = ExtResource("3_dmlaq")
+required_card_id = "am03"
+resulting_card_id = "am032"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_2fh05"]
+script = ExtResource("3_dmlaq")
+required_card_id = "am04"
+resulting_card_id = "am042"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_oy0m8"]
+script = ExtResource("3_dmlaq")
+required_card_id = "wk02"
+resulting_card_id = "wk022"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_e73ev"]
+script = ExtResource("3_dmlaq")
+required_card_id = "am05"
+resulting_card_id = "am052"
+metadata/_custom_type_script = "uid://c5kq15ymk63y6"
+
+[sub_resource type="Resource" id="Resource_nifer"]
+script = ExtResource("2_e73ev")
+transformations = Array[ExtResource("3_dmlaq")]([SubResource("Resource_7abhh"), SubResource("Resource_m5vfr"), SubResource("Resource_h6ixp"), SubResource("Resource_2fh05"), SubResource("Resource_oy0m8"), SubResource("Resource_e73ev")])
+
+[resource]
+script = ExtResource("4_lx8mf")
+id = "调兵东部"
+title = "部队调动"
+description = "东部防线"
+duration = 1.0
+auto_start = true
+auto_collect = true
+rewards = Array[ExtResource("2_e73ev")]([SubResource("Resource_nifer")])

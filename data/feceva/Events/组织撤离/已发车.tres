@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=11 format=3 uid="uid://cjlxd8m25xg47"]
+
+[ext_resource type="Script" uid="uid://bj02frdeiskfx" path="res://scripts/EventBranchData.gd" id="1_4q664"]
+[ext_resource type="Script" uid="uid://dddlkxe4be6uv" path="res://scripts/EventCondition.gd" id="2_7orqt"]
+[ext_resource type="Script" uid="uid://cljq581cxshph" path="res://scripts/EventRewardData.gd" id="2_epu1d"]
+[ext_resource type="Script" uid="uid://d22geur8maor1" path="res://scripts/EventData.gd" id="3_7orqt"]
+[ext_resource type="Script" uid="uid://dhlurc1qow4gw" path="res://scripts/EventOutcome.gd" id="3_xfdpf"]
+[ext_resource type="Resource" uid="uid://b0kobkeugvfl6" path="res://data/feceva/Events/组织撤离/发车完成.tres" id="4_wurrl"]
+[ext_resource type="Script" uid="uid://bib4cm0qyyk0k" path="res://scripts/EventSlotData.gd" id="4_xfdpf"]
+
+[sub_resource type="Resource" id="Resource_7orqt"]
+script = ExtResource("3_xfdpf")
+target_event = ExtResource("4_wurrl")
+
+[sub_resource type="Resource" id="Resource_wurrl"]
+script = ExtResource("1_4q664")
+outcomes = Array[ExtResource("3_xfdpf")]([SubResource("Resource_7orqt")])
+
+[sub_resource type="Resource" id="Resource_4q664"]
+script = ExtResource("4_xfdpf")
+required_tags = Array[String](["胜利点"])
+force_inhale = true
+action_type = "reward"
+
+[resource]
+script = ExtResource("3_7orqt")
+id = "已发车"
+title = "发车"
+description = "工厂设备正在发车"
+slots = Array[ExtResource("4_xfdpf")]([SubResource("Resource_4q664")])
+duration = 30.0
+auto_start = true
+branches = Array[ExtResource("1_4q664")]([SubResource("Resource_wurrl")])
