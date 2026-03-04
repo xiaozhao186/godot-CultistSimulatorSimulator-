@@ -1,4 +1,4 @@
-# Godot 复刻版《密教模拟器》(Cultist Simulator Godot Remake)
+# Godot 复刻版《密教模拟器》(Cultist Simulator Godot Remake )(AKA Cultist Simulator Simulator )
 
 本项目是一个使用 Godot 4.5.1 引擎复现《密教模拟器》(Cultist Simulator) 核心游戏系统的开源项目。
 
